@@ -68,7 +68,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaClip: 0.3
-    - _DissolveAmount: 0.08
+    - _DissolveAmount: 0
     - _DissolveWidth: 0.36
     - _EnableExternalAlpha: 0
     - _QueueControl: 0
