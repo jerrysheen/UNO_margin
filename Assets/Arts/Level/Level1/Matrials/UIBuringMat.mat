@@ -67,8 +67,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AlphaClip: 0.3
-    - _DissolveAmount: 0
+    - _AlphaClip: 0
+    - _DissolveAmount: 0.44
     - _DissolveWidth: 0.36
     - _EnableExternalAlpha: 0
     - _QueueControl: 0
