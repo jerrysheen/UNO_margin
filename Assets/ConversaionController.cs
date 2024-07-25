@@ -13,9 +13,9 @@ public class ConversaionController : MonoBehaviour
     
     public  List<SingleConversation> conversationList;
 
-    private int currentClip = 0;
+    public int currentClip = 0;
 
-    private int playClipPart;
+    public int playClipPart;
 
     // 默认有两个part， 进场和消失。
     public int clipTotalPart = 2;
@@ -54,8 +54,11 @@ public class ConversaionController : MonoBehaviour
 
         conversationList[currentClip].maxPosition = converPopMaxPosition;
         conversationList[currentClip].lastPosition = converLastPosition;
-        conversationList[currentClip++].PlayClip(0);
+        conversationList[currentClip].PlayClip(playClipPart);
 
+        playClipPart++;
+        playClipPart = playClipPart % 2;
+        if (playClipPart == 0) currentClip++;
     }
     
 }
