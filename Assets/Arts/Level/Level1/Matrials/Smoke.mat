@@ -55,8 +55,8 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaClip: 0
-    - _AlphaMulti: 64.94
-    - _CurrrentUV: 0.16
+    - _AlphaMulti: 10
+    - _CurrrentUV: 0.2
     - _DissolveAmount: 0.5
     - _DissolveScale: 50
     - _DissolveWidth: 0.3
@@ -65,7 +65,7 @@ Material:
     - _NeedReverse: 0
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Width: 0.4
+    - _Width: 0.2
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DissolveColor: {r: 1, g: 0.1345456, b: 0.0132075, a: 0}

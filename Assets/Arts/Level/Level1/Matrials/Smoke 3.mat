@@ -67,9 +67,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AlphaMulti: 3.47
+    - _AlphaMulti: 1
     - _CurrrentUV: 0.95
     - _EnableExternalAlpha: 0
+    - _GradientRatio: 7.39
     - _NeedReverse: 0
     - _Width: 0.4
     m_Colors:
