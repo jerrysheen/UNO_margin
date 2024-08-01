@@ -3639,6 +3639,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1312159478}
     m_Modifications:
+    - target: {fileID: 562710791114737298, guid: ed103b893ef73844ca020aac5ea467cc,
+        type: 3}
+      propertyPath: m_Name
+      value: conversation2
+      objectReference: {fileID: 0}
     - target: {fileID: 822640079803431263, guid: ed103b893ef73844ca020aac5ea467cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3689,10 +3694,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1778552814034893569, guid: ed103b893ef73844ca020aac5ea467cc,
+        type: 3}
+      propertyPath: m_Name
+      value: conversation9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573066698982163930, guid: ed103b893ef73844ca020aac5ea467cc,
+        type: 3}
+      propertyPath: m_Name
+      value: conversation8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3479713204468934174, guid: ed103b893ef73844ca020aac5ea467cc,
+        type: 3}
+      propertyPath: m_Name
+      value: conversation1
+      objectReference: {fileID: 0}
     - target: {fileID: 3571407798290112894, guid: ed103b893ef73844ca020aac5ea467cc,
         type: 3}
       propertyPath: m_Name
       value: Level4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3623330301338971409, guid: ed103b893ef73844ca020aac5ea467cc,
+        type: 3}
+      propertyPath: m_Name
+      value: conversation7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4989278223323570226, guid: ed103b893ef73844ca020aac5ea467cc,
+        type: 3}
+      propertyPath: m_Name
+      value: conversation5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6384572814159760652, guid: ed103b893ef73844ca020aac5ea467cc,
+        type: 3}
+      propertyPath: m_Name
+      value: conversation4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592910241628120247, guid: ed103b893ef73844ca020aac5ea467cc,
+        type: 3}
+      propertyPath: m_Name
+      value: conversation3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6980128730115170281, guid: ed103b893ef73844ca020aac5ea467cc,
+        type: 3}
+      propertyPath: m_Name
+      value: conversation6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3978,6 +4023,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1312159478}
     m_Modifications:
+    - target: {fileID: 585163086719318160, guid: 3e263b0f1fd04e24b8b7a5777057d821,
+        type: 3}
+      propertyPath: m_Name
+      value: conversation1
+      objectReference: {fileID: 0}
     - target: {fileID: 1478305763600821025, guid: 3e263b0f1fd04e24b8b7a5777057d821,
         type: 3}
       propertyPath: m_SortingLayer
@@ -4063,6 +4113,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -473
       objectReference: {fileID: 0}
+    - target: {fileID: 2931677425453387106, guid: 3e263b0f1fd04e24b8b7a5777057d821,
+        type: 3}
+      propertyPath: m_Name
+      value: conversation4
+      objectReference: {fileID: 0}
     - target: {fileID: 3237605338570905549, guid: 3e263b0f1fd04e24b8b7a5777057d821,
         type: 3}
       propertyPath: m_SortingLayer
@@ -4083,6 +4138,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a2bc3a20d20eef94598a0cd6d0f20389, type: 2}
+    - target: {fileID: 3435938520434715196, guid: 3e263b0f1fd04e24b8b7a5777057d821,
+        type: 3}
+      propertyPath: m_Name
+      value: conversation3
+      objectReference: {fileID: 0}
     - target: {fileID: 5219936433708430847, guid: 3e263b0f1fd04e24b8b7a5777057d821,
         type: 3}
       propertyPath: m_SortingLayer
@@ -4173,6 +4233,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a2bc3a20d20eef94598a0cd6d0f20389, type: 2}
+    - target: {fileID: 8232908317922446819, guid: 3e263b0f1fd04e24b8b7a5777057d821,
+        type: 3}
+      propertyPath: m_Name
+      value: conversation2
+      objectReference: {fileID: 0}
     - target: {fileID: 8463737354151636375, guid: 3e263b0f1fd04e24b8b7a5777057d821,
         type: 3}
       propertyPath: m_Name

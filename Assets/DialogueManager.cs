@@ -5,7 +5,7 @@ public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance { get; private set; }  // 单例的实例访问器
 
-    public Dictionary<string, GameObject> dialogueDic;
+    public Dictionary<string, ConversaionController> dialogueDic;
 
     public List<GameObject> levelDialogueList;
     public List<GameObject> debugList;
@@ -33,21 +33,27 @@ public class DialogueManager : MonoBehaviour
         dialogueDic = new Dictionary<string, GameObject>();
         foreach (var level_GO in levelDialogueList)
         {
+            
             // 不要这么写， 直接是dialogue的地方，找到conversation controller。然后那边去做这件事。
             // 具体 click里面吊起manager， 传过来一个string，
             // manager通过string去找到对应的场景，以及他的conversationcontroller、
             // controller去触发对应的对话。
             
-            // GameObject dialogueParent = level_GO.transform.Find("Conversation").gameObject.transform.Find("ConversationRoot").gameObject;
-            //
-            // for (int i = 0; i < dialogueParent.transform.childCount; i++)
-            // {
-            //     GameObject dialogue = dialogueParent.transform.GetChild(i).gameObject;
-            //     if(dialogue.name == dialogueParent.name)continue;
-            //     dialogueDic.Add(level_GO.name + "_" + dialogue.name, dialogue);
-            //     Debug.Log(level_GO.name +"_"+ dialogue.name);
-            //     debugList.Add(dialogue);
-            // }
+            GameObject dialogueParent = level_GO.transform.Find("Conversation").gameObject.transform.Find("ConversationRoot").gameObject;
+            ConversaionController conversationController = level_GO.transform.Find("Conversation").GetComponent<ConversaionController>();
+            if (conversationController == null)
+            {
+                Debug.LogError("ConversationController is null");
+            }
+
+            for (int i = 0; i < dialogueParent.transform.childCount; i++)
+            {
+                GameObject dialogue = dialogueParent.transform.GetChild(i).gameObject;
+                if(dialogue.name == dialogueParent.name)continue;
+                dialogueDic.Add(level_GO.name + "_" + dialogue.name, conversationController);
+                Debug.Log(level_GO.name +"_"+ dialogue.name);
+                debugList.Add(dialogue);
+            }
         }
     }
 
