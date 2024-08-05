@@ -24,17 +24,14 @@ public class Raycast : MonoBehaviour
                  // 输出被射线击中的对象
                  Debug.Log("Ray hit: " + hit.collider.gameObject.name);
                  
+                 GameManager.Instance.ItemClicked(hit.collider.gameObject);
                     // 如果被击中的对象有ClickEffect组件
-                 ClickEffect clickEffect = hit.collider.gameObject.GetComponent<ClickEffect>();
-                 if (clickEffect)
-                 {
-                        // 调用ClickEffect组件的ChangeState方法
-                        clickEffect.ChangeState();
-                 }
+
              }
              else
              {
                  Debug.Log("No hit");
+                 GameManager.Instance.EmptyClick();
              }
          }
     }

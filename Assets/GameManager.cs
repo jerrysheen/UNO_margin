@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -15,6 +16,17 @@ public class GameManager : MonoBehaviour
     public GameObject level5Mount;
     private static GameManager instance;
 
+
+    public GameState state = GameState.Normal;
+    
+    public ClickEffect currentClickEffect;
+    public string currentDialogue;
+    public enum GameState
+    {
+        Normal,
+        PlayFullScreenPic,
+        PlayDialogue
+    }
     public static GameManager Instance
     {
         get
@@ -40,12 +52,25 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject); // 确保不销毁单例对象
+            //DontDestroyOnLoad(gameObject); // 确保不销毁单例对象
         }
         else if (instance != this)
         {
-            Destroy(gameObject); // 确保只有一个单例实例存在
+            //Destroy(gameObject); // 确保只有一个单例实例存在
         }
+    }
+
+    public void TriggerDialogue(string name)
+    {
+        DialogueManager.Instance.TriggerDialogue(name);
+        currentDialogue = name;
+    }
+
+
+    public bool SetGameState(GameState newState)
+    {
+        state = newState;
+        return true;
     }
 
     public void ShowAlbum()
@@ -63,4 +88,40 @@ public class GameManager : MonoBehaviour
     }
 
     // 这里添加 GameManager 的其他功能和方法
+    
+    public void ItemClicked(GameObject go)
+    {
+        //  这里之后会添加触发条件，来控制。
+        ClickEffect clickEffect = go.GetComponent<ClickEffect>();
+        if (clickEffect)
+        {
+            currentClickEffect = clickEffect;
+            clickEffect.ChangeState();
+        }
+    }
+    
+    public void EmptyClick()
+    {
+        // dialogue 隐藏判断优先于 FullScreen 隐藏。
+        
+        if (currentDialogue != "")
+        {
+            DialogueManager.Instance.DisableDialogue(currentDialogue);
+            currentDialogue = "";
+            if (currentClickEffect != null)
+            {
+                state = GameState.PlayFullScreenPic;
+            }
+            else
+            {
+                state = GameState.Normal;
+            }
+        }
+        else if (currentClickEffect != null)
+        {
+            currentClickEffect.DisableEffect();
+            currentClickEffect = null;
+            state = GameState.Normal;
+        }
+    }
 }

@@ -9,17 +9,19 @@ public class DialogueManager : MonoBehaviour
 
     public List<GameObject> levelDialogueList;
     public List<GameObject> debugList;
+    
+    public bool isPlayingDialue = false;
     private void Awake()
     {
         // 确保只有一个实例存在
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);  // 防止被销毁
+            //DontDestroyOnLoad(gameObject);  // 防止被销毁
         }
         else
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
         
         GameObject level1 = GameObject.Find("Level1");
@@ -30,7 +32,7 @@ public class DialogueManager : MonoBehaviour
         
         levelDialogueList = new List<GameObject>(){level1, level2, level3, level4, level5};
         debugList = new List<GameObject>();
-        dialogueDic = new Dictionary<string, GameObject>();
+        dialogueDic = new Dictionary<string, ConversaionController>();
         foreach (var level_GO in levelDialogueList)
         {
             
@@ -58,13 +60,32 @@ public class DialogueManager : MonoBehaviour
     }
 
     // 显示对话框
-    public void Show()
+    public void TriggerDialogue(string name)
     {
-        // 逻辑来显示对话框
-        Debug.Log("Dialogue shown.");
-        // 此处可以添加更多代码，比如设置对话框内容，使其可见等
+        Debug.Log("DialogueManager Trigger Dialogue");
+        dialogueDic.TryGetValue(name, out ConversaionController script);
+        if (script)
+        {
+            script.PlayDialogue(name);
+            DialogueManager.Instance.isPlayingDialue = true;
+        }
+        else
+        {
+            Debug.LogError("Can't find dialogue!!");
+        }
     }
 
+    public void DisableDialogue(string name)
+    {
+        dialogueDic.TryGetValue(name, out ConversaionController script);
+        if (script)
+        {
+            script.DisableDialogue(name);
+            DialogueManager.Instance.isPlayingDialue = false;
+        }
+    }
+
+    
     // 隐藏对话框
     public void Off()
     {
