@@ -1,3 +1,4 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -18,6 +19,9 @@ public class GameManager : MonoBehaviour
 
 
     public GameState state = GameState.Normal;
+    public LevelState levelState = LevelState.Intro_Entering;
+    
+    
     
     public ClickEffect currentClickEffect;
     public string currentDialogue;
@@ -27,6 +31,29 @@ public class GameManager : MonoBehaviour
         PlayFullScreenPic,
         PlayDialogue
     }
+
+    public enum LevelState
+    {
+        Intro_Entering,
+        Intro,
+        Intro_Leaving,
+        Level1_Entering,
+        Level1,
+        Level1_Leaving,
+        Level2_Entering,
+        Level2,
+        Level2_Leaving,
+        Level3_Entering,
+        Level3,
+        Level3_Leaving,
+        Level4_Entering,
+        Level4,
+        Level4_Leaving,
+        Level5_Entering,
+        Level5,
+        Level5_Leaving,
+    }
+
     public static GameManager Instance
     {
         get
@@ -58,6 +85,15 @@ public class GameManager : MonoBehaviour
         {
             //Destroy(gameObject); // 确保只有一个单例实例存在
         }
+    }
+
+
+    private void Start()
+    {
+                
+        //todo:
+        // testcode
+        EventManager.Instance.TriggerEvent(GameEvent.OnEnterLevel3);
     }
 
     public void TriggerDialogue(string name)
@@ -102,8 +138,7 @@ public class GameManager : MonoBehaviour
     
     public void EmptyClick()
     {
-        // dialogue 隐藏判断优先于 FullScreen 隐藏。
-        
+        EventManager.Instance.TriggerEvent(GameEvent.EmptyClicked);
         if (currentDialogue != "")
         {
             DialogueManager.Instance.DisableDialogue(currentDialogue);

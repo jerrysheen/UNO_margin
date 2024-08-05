@@ -94,22 +94,25 @@ public class ClickEffect : MonoBehaviour
     public void DisableEffect()
     {
         {
-            // 获取当前GameObject的所有Renderer组件
-            Renderer[] renderers = effectGo.GetComponentsInChildren<Renderer>();
             Sequence mySequence = DOTween.Sequence(); // 创建一个DOTween序列
-
-            // 遍历所有的Renderer
-            foreach (Renderer rend in renderers)
+            // 获取当前GameObject的所有Renderer组件
+            if (effectGo)
             {
-                // 确保Renderer使用的材质有透明度属性
-                if (rend.material.HasProperty("_Color"))
+                Renderer[] renderers = effectGo.GetComponentsInChildren<Renderer>();
+
+                // 遍历所有的Renderer
+                foreach (Renderer rend in renderers)
                 {
-                    Color finalColor = rend.material.color;
-                    finalColor.a = 0; // 初始透明度设为0
-                    rend.material.color = finalColor;
-                    effectGo.SetActive(true);
-                    // 将透明度从0渐变到原始值
-                    mySequence.Join(rend.material.DOColor(new Color(finalColor.r, finalColor.g, finalColor.b, 1), 120.5f));
+                    // 确保Renderer使用的材质有透明度属性
+                    if (rend.material.HasProperty("_Color"))
+                    {
+                        Color finalColor = rend.material.color;
+                        finalColor.a = 0; // 初始透明度设为0
+                        rend.material.color = finalColor;
+                        effectGo.SetActive(true);
+                        // 将透明度从0渐变到原始值
+                        mySequence.Join(rend.material.DOColor(new Color(finalColor.r, finalColor.g, finalColor.b, 1), 120.5f));
+                    }
                 }
             }
 

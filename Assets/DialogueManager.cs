@@ -5,7 +5,7 @@ public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance { get; private set; }  // 单例的实例访问器
 
-    public Dictionary<string, ConversaionController> dialogueDic;
+    public Dictionary<string, ConversationController> dialogueDic;
 
     public List<GameObject> levelDialogueList;
     public List<GameObject> debugList;
@@ -32,7 +32,7 @@ public class DialogueManager : MonoBehaviour
         
         levelDialogueList = new List<GameObject>(){level1, level2, level3, level4, level5};
         debugList = new List<GameObject>();
-        dialogueDic = new Dictionary<string, ConversaionController>();
+        dialogueDic = new Dictionary<string, ConversationController>();
         foreach (var level_GO in levelDialogueList)
         {
             
@@ -42,7 +42,7 @@ public class DialogueManager : MonoBehaviour
             // controller去触发对应的对话。
             
             GameObject dialogueParent = level_GO.transform.Find("Conversation").gameObject.transform.Find("ConversationRoot").gameObject;
-            ConversaionController conversationController = level_GO.transform.Find("Conversation").GetComponent<ConversaionController>();
+            ConversationController conversationController = level_GO.transform.Find("Conversation").GetComponent<ConversationController>();
             if (conversationController == null)
             {
                 Debug.LogError("ConversationController is null");
@@ -63,7 +63,7 @@ public class DialogueManager : MonoBehaviour
     public void TriggerDialogue(string name)
     {
         Debug.Log("DialogueManager Trigger Dialogue");
-        dialogueDic.TryGetValue(name, out ConversaionController script);
+        dialogueDic.TryGetValue(name, out ConversationController script);
         if (script)
         {
             script.PlayDialogue(name);
@@ -77,7 +77,7 @@ public class DialogueManager : MonoBehaviour
 
     public void DisableDialogue(string name)
     {
-        dialogueDic.TryGetValue(name, out ConversaionController script);
+        dialogueDic.TryGetValue(name, out ConversationController script);
         if (script)
         {
             script.DisableDialogue(name);

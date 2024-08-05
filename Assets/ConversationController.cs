@@ -5,7 +5,7 @@ using UnityEditor;
 using UnityEditor.Build;
 using UnityEngine;
 
-public class ConversaionController : MonoBehaviour
+public class ConversationController : MonoBehaviour
 {
 
     public GameObject converPopMaxPosition;
@@ -86,13 +86,13 @@ public class ConversaionController : MonoBehaviour
     
 }
 
-[CustomEditor(typeof(ConversaionController))]
+[CustomEditor(typeof(ConversationController))]
 public class ConversationControllerEditor : Editor
 {
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
-        ConversaionController script = target as ConversaionController;
+        ConversationController script = target as ConversationController;
         if (GUILayout.Button("testPlay"))
         {
             script.PlayOneClip();
