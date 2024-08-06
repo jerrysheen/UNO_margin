@@ -108,10 +108,10 @@ public class ClickEffect : MonoBehaviour
                     {
                         Color finalColor = rend.material.color;
                         finalColor.a = 0; // 初始透明度设为0
-                        rend.material.color = finalColor;
+                        //rend.material.color = finalColor;
                         effectGo.SetActive(true);
                         // 将透明度从0渐变到原始值
-                        mySequence.Join(rend.material.DOColor(new Color(finalColor.r, finalColor.g, finalColor.b, 1), 120.5f));
+                        mySequence.Join(rend.material.DOColor(new Color(finalColor.r, finalColor.g, finalColor.b, 0), 1));
                     }
                 }
             }
@@ -120,6 +120,7 @@ public class ClickEffect : MonoBehaviour
             mySequence.OnComplete(() =>
             {
                 if (afterCkickGo) afterCkickGo.SetActive(true);
+                if (effectGo) effectGo.SetActive(false);
                 GameManager.Instance.SetGameState(GameManager.GameState.PlayFullScreenPic);
             });
 

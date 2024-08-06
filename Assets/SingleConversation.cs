@@ -27,7 +27,7 @@ public class SingleConversation : MonoBehaviour
             Vector3 position = this.transform.position;
             position.y = maxPosition.transform.position.y;
             // 添加向上移动的动画，假设向上移动 5 单位，耗时 1 秒
-            mySequence.Append(this.transform.DOMove(position, 0.5f));
+            mySequence.Append(this.transform.DOMove(position, 0.3f));
             position.y = lastPosition.transform.position.y;
             mySequence.Append(this.transform.DOMove(position, 0.15f));
             
