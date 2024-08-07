@@ -1,5 +1,8 @@
 using System;
+using System.Collections.Generic;
+using Cinemachine;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -16,13 +19,15 @@ public class GameManager : MonoBehaviour
     public GameObject level4Mount;
     public GameObject level5Mount;
     private static GameManager instance;
-
+    
 
     public GameState state = GameState.Normal;
-    public LevelState levelState = LevelState.Intro_Entering;
-    
-    
-    
+    public LevelState levelState = LevelState.Level0;
+    public LevelState nextScene = LevelState.Level1;
+
+    public CinemachineVirtualCamera oldCam = null;
+
+    public Dictionary<LevelState, CinemachineVirtualCamera> levelMountDic;
     public ClickEffect currentClickEffect;
     public string currentDialogue;
     public enum GameState
@@ -34,24 +39,12 @@ public class GameManager : MonoBehaviour
 
     public enum LevelState
     {
-        Intro_Entering,
-        Intro,
-        Intro_Leaving,
-        Level1_Entering,
+        Level0,
         Level1,
-        Level1_Leaving,
-        Level2_Entering,
         Level2,
-        Level2_Leaving,
-        Level3_Entering,
         Level3,
-        Level3_Leaving,
-        Level4_Entering,
         Level4,
-        Level4_Leaving,
-        Level5_Entering,
         Level5,
-        Level5_Leaving,
     }
 
     public static GameManager Instance
@@ -93,7 +86,31 @@ public class GameManager : MonoBehaviour
                 
         //todo:
         // testcode
-        EventManager.Instance.TriggerEvent(GameEvent.OnEnterLevel3);
+        //EventManager.Instance.TriggerEvent(GameEvent.OnEnterLevel3);
+
+        levelMountDic = new Dictionary<LevelState, CinemachineVirtualCamera>();
+        Transform parent = this.transform.Find("VirtualLevelCam");
+        Transform[] childTrans = parent.GetComponentsInChildren<Transform>();
+        for (int i = 0; i < parent.transform.childCount; i++)
+        {
+            GameObject child = parent.transform.GetChild(i).gameObject;
+            if (child.name == parent.name) continue;
+            CinemachineVirtualCamera temp = child.GetComponent<CinemachineVirtualCamera>();
+            if (temp)
+            {
+                if (child.name == "Level0Cam")
+                {
+                    oldCam = child.GetComponent<CinemachineVirtualCamera>();
+                    oldCam.Priority = 11;
+                }
+
+                levelMountDic.Add((LevelState)(i), temp);
+            }
+            else
+            {
+                Debug.LogError("Camera not exits!!!");
+            }
+        }
     }
 
     public void TriggerDialogue(string name)
@@ -157,6 +174,52 @@ public class GameManager : MonoBehaviour
             currentClickEffect.DisableEffect();
             currentClickEffect = null;
             state = GameState.Normal;
+        }
+    }
+    
+    public void SwitchToScene()
+    {
+        levelMountDic.TryGetValue(nextScene, out CinemachineVirtualCamera nextCam);
+        EventManager.Instance.TriggerEvent(GetLevelEvent(nextScene.ToString(), "_Entering"), 1.0f);
+        if (nextCam)
+        {
+            nextCam.Priority = 12;
+            oldCam.Priority = 10;
+            oldCam = nextCam;
+            oldCam.Priority = 11;
+        }
+        else
+        {
+            Debug.LogError("false!!!");
+        }
+    }
+    
+    GameEvent GetLevelEvent(string Level, string EnterOrExit)
+    {
+        GameEvent temp = (GameEvent)Enum.Parse(typeof(GameEvent), Level + EnterOrExit);
+        Debug.Log(temp.ToString());
+        return temp;
+    }
+}
+[CustomEditor(typeof(GameManager))]
+public class GameManagerEditor : Editor
+{
+    public override void OnInspectorGUI()
+    {
+        base.OnInspectorGUI();
+        GameManager gameManager = (GameManager) target;
+        if (GUILayout.Button("Show Album"))
+        {
+            gameManager.ShowAlbum();
+        }
+        if (GUILayout.Button("Open Camera"))
+        {
+            gameManager.OpenCamera();
+        }
+
+        if (GUILayout.Button("Switch Camera"))
+        {
+            gameManager.SwitchToScene();
         }
     }
 }

@@ -1,24 +1,44 @@
 using System;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class EventManager : MonoBehaviour
 {
-    public static EventManager Instance { get; private set; }
 
     private Dictionary<string, Action> eventDictionary = new Dictionary<string, Action>();
     private Dictionary<string, Action<object>> eventDictionaryWithParam = new Dictionary<string, Action<object>>();
-
-    private void Awake()
+    private static EventManager instance;
+    public static EventManager Instance
     {
-        if (Instance == null)
+        get
         {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
+            if (instance == null)
+            {
+                // 在场景中查找现有的 GameManager 实例
+                instance = FindObjectOfType<EventManager>();
+                
+                // 如果找不到，创建一个新的 GameObject，并添加 GameManager 组件
+                if (instance == null)
+                {
+                    GameObject go = new GameObject("EventManager");
+                    instance = go.AddComponent<EventManager>();
+                }
+            }
+            return instance;
         }
-        else
+    }
+
+    void Awake()
+    {
+        if (instance == null)
         {
-            Destroy(gameObject);
+            instance = this;
+            //DontDestroyOnLoad(gameObject); // 确保不销毁单例对象
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject); // 确保只有一个单例实例存在
         }
     }
 
@@ -95,12 +115,22 @@ public class EventManager : MonoBehaviour
     }
 
     // 触发无参数的事件
-    public void TriggerEvent(GameEvent eventName)
+    public void TriggerEvent(GameEvent eventName, float delay = 0.0f)
     {
+        Debug.Log("Trigger Event !!! : " + eventName);
         string eventKey = eventName.ToString();
+        
         if (eventDictionary.TryGetValue(eventKey, out Action thisEvent))
         {
-            thisEvent.Invoke();
+            DOVirtual.DelayedCall(delay, () =>
+            {
+                Debug.Log("Event triggered after delay: " + eventName);
+                thisEvent.Invoke();
+            });
+        }
+        else
+        {
+            Debug.LogWarning("Event not found: " + eventName);
         }
     }
 

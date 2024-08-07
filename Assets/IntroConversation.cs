@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
+using UnityEditor.TerrainTools;
 using UnityEngine;
 
 public class IntroConversation : MonoBehaviour
@@ -12,6 +14,8 @@ public class IntroConversation : MonoBehaviour
     public bool shouldStartIntroConversation = false;
     public int currentClip = 0;
     public int currentIndex = 0;
+
+    public GameObject converRoot;
     private void OnEnable()
     {
         EventManager.Instance.StartListening(gameEvent, OnLevelStart);
@@ -58,7 +62,6 @@ public class IntroConversation : MonoBehaviour
                }
             }
         } 
-        
-
     }
 }
+
