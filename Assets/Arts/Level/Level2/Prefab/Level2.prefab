@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 888023546077983862}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1014, y: 94, z: 0}
+  m_LocalPosition: {x: 1014, y: 34, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -42,6 +42,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4568801407147694909}
+  - component: {fileID: 130049130437340053}
   m_Layer: 0
   m_Name: Level2
   m_TagString: Untagged
@@ -66,6 +67,30 @@ Transform:
   - {fileID: 659470419961174629}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &130049130437340053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905224410008579499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c109fa7d7cb035345b26092473d8aecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conversationListName:
+  - Level2_Conversation6
+  - Level2_Conversation5
+  - Level2_Conversation4
+  - Level2_Conversation3
+  - Level2_Conversation2
+  - Level2_Conversation1
+  gameEvent: 8
+  shouldStartIntroConversation: 0
+  currentClip: 0
+  currentIndex: 0
+  converRoot: {fileID: 0}
 --- !u!1 &1054211835119737360
 GameObject:
   m_ObjectHideFlags: 0
@@ -76,6 +101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5008137050630260931}
   - component: {fileID: 391770348962103337}
+  - component: {fileID: 677197574376491144}
   m_Layer: 0
   m_Name: Conversation6
   m_TagString: Untagged
@@ -136,9 +162,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1045192603
-  m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: -1567155121
+  m_SortingLayer: 2
+  m_SortingOrder: 15
   m_Sprite: {fileID: 21300000, guid: 827618d9b0b8359479e1816156a51a63, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -150,6 +176,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &677197574376491144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054211835119737360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b34a79c78f67acc4a8d2c3a4022bdea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  converName: DefaultConversation
+  maxPosition: {fileID: 0}
+  lastPosition: {fileID: 0}
 --- !u!1 &1621177230325724600
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,8 +237,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe74af7e3ea430742b5f340c9a8e7ba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  converPopMaxPosition: {fileID: 4352849757432464178}
-  converLastPosition: {fileID: 7728957864849560992}
+  converPopMaxPosition: {fileID: 0}
+  converLastPosition: {fileID: 0}
   converRoot: {fileID: 7809812971538817343}
   conversationList: []
   currentClip: 0
@@ -213,6 +254,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2006098076165316260}
   - component: {fileID: 60388493334697710}
+  - component: {fileID: 2059099127247499259}
   m_Layer: 0
   m_Name: Conversation2
   m_TagString: Untagged
@@ -273,9 +315,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1045192603
-  m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: -1567155121
+  m_SortingLayer: 2
+  m_SortingOrder: 15
   m_Sprite: {fileID: 21300000, guid: 46e8e07325de26c44aca4206bc5d9ffd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -287,6 +329,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2059099127247499259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2737468409422760469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b34a79c78f67acc4a8d2c3a4022bdea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  converName: DefaultConversation
+  maxPosition: {fileID: 0}
+  lastPosition: {fileID: 0}
 --- !u!1 &3718928818733809712
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,6 +354,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3443506456620717966}
   - component: {fileID: 7582292309392375225}
+  - component: {fileID: 5619601440312615188}
   m_Layer: 0
   m_Name: Conversation1
   m_TagString: Untagged
@@ -357,9 +415,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1045192603
-  m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: -1567155121
+  m_SortingLayer: 2
+  m_SortingOrder: 15
   m_Sprite: {fileID: 21300000, guid: 37d5dc4b5859a21479f010e81e79f818, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -371,6 +429,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5619601440312615188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3718928818733809712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b34a79c78f67acc4a8d2c3a4022bdea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  converName: DefaultConversation
+  maxPosition: {fileID: 0}
+  lastPosition: {fileID: 0}
 --- !u!1 &4352849757432464178
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,7 +469,7 @@ Transform:
   m_GameObject: {fileID: 4352849757432464178}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 750, z: 0}
+  m_LocalPosition: {x: 0, y: 642, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -496,6 +569,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8139303676282449479}
   - component: {fileID: 1476494797878841581}
+  - component: {fileID: 1089044200738573528}
   m_Layer: 0
   m_Name: Conversation3
   m_TagString: Untagged
@@ -556,9 +630,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1045192603
-  m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: -1567155121
+  m_SortingLayer: 2
+  m_SortingOrder: 15
   m_Sprite: {fileID: 21300000, guid: da01602c49981164d8c3e3b641618d93, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -570,6 +644,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1089044200738573528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7418732936780748936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b34a79c78f67acc4a8d2c3a4022bdea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  converName: DefaultConversation
+  maxPosition: {fileID: 0}
+  lastPosition: {fileID: 0}
 --- !u!1 &7728957864849560992
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,7 +684,7 @@ Transform:
   m_GameObject: {fileID: 7728957864849560992}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 623, z: 0}
+  m_LocalPosition: {x: 0, y: 504, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -648,6 +737,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1889008620606939206}
   - component: {fileID: 3316748756544715257}
+  - component: {fileID: 4517636867393775185}
   m_Layer: 0
   m_Name: Conversation4
   m_TagString: Untagged
@@ -708,9 +798,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1045192603
-  m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: -1567155121
+  m_SortingLayer: 2
+  m_SortingOrder: 15
   m_Sprite: {fileID: 21300000, guid: 0419afb2dd39b9b44b5b260d5fad1434, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -722,6 +812,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4517636867393775185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8073786319038573361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b34a79c78f67acc4a8d2c3a4022bdea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  converName: DefaultConversation
+  maxPosition: {fileID: 0}
+  lastPosition: {fileID: 0}
 --- !u!1 &8169456594092493888
 GameObject:
   m_ObjectHideFlags: 0
@@ -732,6 +837,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1108604989911687545}
   - component: {fileID: 6327991972890551450}
+  - component: {fileID: 5058650578546206196}
   m_Layer: 0
   m_Name: Conversation5
   m_TagString: Untagged
@@ -792,9 +898,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1045192603
-  m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: -1567155121
+  m_SortingLayer: 2
+  m_SortingOrder: 15
   m_Sprite: {fileID: 21300000, guid: a8e031049a11b2144b67e3544b531c10, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -806,3 +912,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5058650578546206196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8169456594092493888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b34a79c78f67acc4a8d2c3a4022bdea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  converName: DefaultConversation
+  maxPosition: {fileID: 0}
+  lastPosition: {fileID: 0}

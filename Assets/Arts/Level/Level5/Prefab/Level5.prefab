@@ -94,8 +94,9 @@ GameObject:
   m_Component:
   - component: {fileID: 9075793335229787377}
   - component: {fileID: 1589419194424589823}
+  - component: {fileID: 3391321108408801691}
   m_Layer: 0
-  m_Name: conversation (1)
+  m_Name: conversation1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -136,7 +137,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: a2bc3a20d20eef94598a0cd6d0f20389, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -154,9 +155,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1950422495
-  m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingLayerID: -1567155121
+  m_SortingLayer: 2
+  m_SortingOrder: 15
   m_Sprite: {fileID: 21300000, guid: 29a3230a67aa0874c89432dc6cda2aa7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -168,6 +169,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3391321108408801691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585163086719318160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b34a79c78f67acc4a8d2c3a4022bdea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  converName: DefaultConversation
+  maxPosition: {fileID: 0}
+  lastPosition: {fileID: 0}
 --- !u!1 &2254699667290442999
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,8 +278,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4257431794141300152}
   - component: {fileID: 2453121817129787701}
+  - component: {fileID: 1039555025365976648}
   m_Layer: 0
-  m_Name: conversation (4)
+  m_Name: conversation4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -304,7 +321,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: a2bc3a20d20eef94598a0cd6d0f20389, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -322,9 +339,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1950422495
-  m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingLayerID: -1567155121
+  m_SortingLayer: 2
+  m_SortingOrder: 15
   m_Sprite: {fileID: 21300000, guid: 8721c0361c700e74e93bb044170f02ca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -336,6 +353,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1039555025365976648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2931677425453387106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b34a79c78f67acc4a8d2c3a4022bdea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  converName: DefaultConversation
+  maxPosition: {fileID: 0}
+  lastPosition: {fileID: 0}
 --- !u!1 &3412487709757743427
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,8 +411,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1900645695165668494}
   - component: {fileID: 5219936433708430847}
+  - component: {fileID: 7072228185772521102}
   m_Layer: 0
-  m_Name: conversation (3)
+  m_Name: conversation3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -421,7 +454,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: a2bc3a20d20eef94598a0cd6d0f20389, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -439,9 +472,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1950422495
-  m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingLayerID: -1567155121
+  m_SortingLayer: 2
+  m_SortingOrder: 15
   m_Sprite: {fileID: 21300000, guid: 74adc7b3770d6e748a4ba818edfc5c70, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -453,6 +486,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7072228185772521102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3435938520434715196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b34a79c78f67acc4a8d2c3a4022bdea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  converName: DefaultConversation
+  maxPosition: {fileID: 0}
+  lastPosition: {fileID: 0}
 --- !u!1 &3760631218889794512
 GameObject:
   m_ObjectHideFlags: 0
@@ -463,6 +511,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5093888231491330097}
   - component: {fileID: 1478305763600821025}
+  - component: {fileID: 7301104856605916045}
   m_Layer: 0
   m_Name: conversation (5)
   m_TagString: Untagged
@@ -505,7 +554,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: a2bc3a20d20eef94598a0cd6d0f20389, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -523,9 +572,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1950422495
-  m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingLayerID: -1567155121
+  m_SortingLayer: 2
+  m_SortingOrder: 15
   m_Sprite: {fileID: 21300000, guid: 0df86b58c8bb900408b71b30a09cdf8e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -537,6 +586,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7301104856605916045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3760631218889794512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b34a79c78f67acc4a8d2c3a4022bdea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  converName: DefaultConversation
+  maxPosition: {fileID: 0}
+  lastPosition: {fileID: 0}
 --- !u!1 &4299440215387719092
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,6 +611,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4054441978367590069}
   - component: {fileID: 1530244906648529364}
+  - component: {fileID: 4772418721182473347}
   m_Layer: 0
   m_Name: conversation (6)
   m_TagString: Untagged
@@ -589,7 +654,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: a2bc3a20d20eef94598a0cd6d0f20389, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -607,9 +672,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1950422495
-  m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingLayerID: -1567155121
+  m_SortingLayer: 2
+  m_SortingOrder: 15
   m_Sprite: {fileID: 21300000, guid: 5752aa5b1fae4b545a3d687ab4b22f54, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -621,6 +686,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4772418721182473347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4299440215387719092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b34a79c78f67acc4a8d2c3a4022bdea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  converName: DefaultConversation
+  maxPosition: {fileID: 0}
+  lastPosition: {fileID: 0}
 --- !u!1 &4390497907339116851
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,6 +711,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5740026627137935792}
   - component: {fileID: 7061644600164931571}
+  - component: {fileID: 9085363783456687408}
   m_Layer: 0
   m_Name: conversation
   m_TagString: Untagged
@@ -673,7 +754,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: a2bc3a20d20eef94598a0cd6d0f20389, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -691,9 +772,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1950422495
-  m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingLayerID: -1567155121
+  m_SortingLayer: 2
+  m_SortingOrder: 15
   m_Sprite: {fileID: 21300000, guid: 8279adbea1ac0494c8c274bd680a468c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -705,6 +786,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &9085363783456687408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4390497907339116851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b34a79c78f67acc4a8d2c3a4022bdea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  converName: DefaultConversation
+  maxPosition: {fileID: 0}
+  lastPosition: {fileID: 0}
 --- !u!1 &4494774716078059506
 GameObject:
   m_ObjectHideFlags: 0
@@ -814,7 +910,7 @@ Transform:
   m_GameObject: {fileID: 4509402807315771249}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11, y: -449, z: 0}
+  m_LocalPosition: {x: -11, y: -473, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1301,8 +1397,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3372114209361336994}
   - component: {fileID: 3237605338570905549}
+  - component: {fileID: 5920676495474123671}
   m_Layer: 0
-  m_Name: conversation (2)
+  m_Name: conversation2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1343,7 +1440,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: a2bc3a20d20eef94598a0cd6d0f20389, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1361,9 +1458,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1950422495
-  m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingLayerID: -1567155121
+  m_SortingLayer: 2
+  m_SortingOrder: 15
   m_Sprite: {fileID: 21300000, guid: f075553a77348aa429241549a9240c8a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1375,6 +1472,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5920676495474123671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8232908317922446819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b34a79c78f67acc4a8d2c3a4022bdea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  converName: DefaultConversation
+  maxPosition: {fileID: 0}
+  lastPosition: {fileID: 0}
 --- !u!1 &8463737354151636375
 GameObject:
   m_ObjectHideFlags: 0
@@ -1408,7 +1520,6 @@ Transform:
   - {fileID: 5287570104734885672}
   - {fileID: 3954992499123678686}
   - {fileID: 3257546645133090764}
-  - {fileID: 2009535428920643653}
   - {fileID: 418292807430495279}
   - {fileID: 4446955940488898158}
   - {fileID: 7141451985786003709}
@@ -1423,6 +1534,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 418292807430495279}
+  - component: {fileID: 9077934984112180054}
   m_Layer: 0
   m_Name: Conversation
   m_TagString: Untagged
@@ -1447,6 +1559,25 @@ Transform:
   - {fileID: 2567535791152639620}
   m_Father: {fileID: 5431175618885526378}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9077934984112180054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8623164304377154352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe74af7e3ea430742b5f340c9a8e7ba0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  converPopMaxPosition: {fileID: 0}
+  converLastPosition: {fileID: 0}
+  converRoot: {fileID: 6227440685321469153}
+  conversationList: []
+  currentClip: 0
+  playClipPart: 0
+  clipTotalPart: 2
 --- !u!1 &8693271800807598898
 GameObject:
   m_ObjectHideFlags: 0
@@ -1531,77 +1662,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &6568627184138808530
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 5431175618885526378}
-    m_Modifications:
-    - target: {fileID: 4668893936598776983, guid: f9a3bb5243c8ba447bae17310bc68b58,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 981
-      objectReference: {fileID: 0}
-    - target: {fileID: 4668893936598776983, guid: f9a3bb5243c8ba447bae17310bc68b58,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 321
-      objectReference: {fileID: 0}
-    - target: {fileID: 4668893936598776983, guid: f9a3bb5243c8ba447bae17310bc68b58,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4668893936598776983, guid: f9a3bb5243c8ba447bae17310bc68b58,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4668893936598776983, guid: f9a3bb5243c8ba447bae17310bc68b58,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4668893936598776983, guid: f9a3bb5243c8ba447bae17310bc68b58,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4668893936598776983, guid: f9a3bb5243c8ba447bae17310bc68b58,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4668893936598776983, guid: f9a3bb5243c8ba447bae17310bc68b58,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4668893936598776983, guid: f9a3bb5243c8ba447bae17310bc68b58,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4668893936598776983, guid: f9a3bb5243c8ba447bae17310bc68b58,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6866154129783899248, guid: f9a3bb5243c8ba447bae17310bc68b58,
-        type: 3}
-      propertyPath: m_Name
-      value: UI
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f9a3bb5243c8ba447bae17310bc68b58, type: 3}
---- !u!4 &2009535428920643653 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4668893936598776983, guid: f9a3bb5243c8ba447bae17310bc68b58,
-    type: 3}
-  m_PrefabInstance: {fileID: 6568627184138808530}
-  m_PrefabAsset: {fileID: 0}
