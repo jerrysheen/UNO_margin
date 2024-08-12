@@ -30,6 +30,10 @@ public class GameManager : MonoBehaviour
     public Dictionary<LevelState, CinemachineVirtualCamera> levelMountDic;
     public ClickEffect currentClickEffect;
     public string currentDialogue;
+
+    public Dictionary<LevelState, Vector3> levelMountPoints;
+    public KeyBoardMouseInput keyBoardMouseInputScript;
+    
     public enum GameState
     {
         Normal,
@@ -89,6 +93,7 @@ public class GameManager : MonoBehaviour
         //EventManager.Instance.TriggerEvent(GameEvent.OnEnterLevel3);
 
         levelMountDic = new Dictionary<LevelState, CinemachineVirtualCamera>();
+        levelMountPoints = new Dictionary<LevelState, Vector3>();
         Transform parent = this.transform.Find("VirtualLevelCam");
         Transform[] childTrans = parent.GetComponentsInChildren<Transform>();
         for (int i = 0; i < parent.transform.childCount; i++)
@@ -110,6 +115,20 @@ public class GameManager : MonoBehaviour
             {
                 Debug.LogError("Camera not exits!!!");
             }
+        }
+        
+        parent = this.transform.Find("MountPoint");
+        for (int i = 0; i < parent.transform.childCount; i++)
+        {
+            GameObject child = parent.transform.GetChild(i).gameObject;
+            if (child.name == parent.name) continue;
+            levelMountPoints.Add((LevelState)(i), child.transform.position);
+        }
+
+        keyBoardMouseInputScript = this.GetComponent<KeyBoardMouseInput>();
+        if (!keyBoardMouseInputScript)
+        {
+            Debug.LogError("No such script");
         }
     }
 
@@ -180,6 +199,7 @@ public class GameManager : MonoBehaviour
     public void SwitchToScene()
     {
         levelMountDic.TryGetValue(nextScene, out CinemachineVirtualCamera nextCam);
+        levelMountPoints.TryGetValue(nextScene, out Vector3 nextPos);
         EventManager.Instance.TriggerEvent(GetLevelEvent(nextScene.ToString(), "_Entering"), 1.0f);
         if (nextCam)
         {
@@ -187,6 +207,7 @@ public class GameManager : MonoBehaviour
             oldCam.Priority = 10;
             oldCam = nextCam;
             oldCam.Priority = 11;
+            keyBoardMouseInputScript.startPosition = nextPos;
         }
         else
         {

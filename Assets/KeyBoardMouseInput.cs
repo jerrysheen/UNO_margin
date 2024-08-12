@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class KeyBoardMouseInput : MonoBehaviour
 {
+    public Vector3 startPosition;
+    
     void Update()
     {
         // 检测鼠标点击
@@ -12,7 +14,7 @@ public class KeyBoardMouseInput : MonoBehaviour
         {
             //Debug.Log(Input.mousePosition);
             Vector3 calculatedPos =
-                new Vector3(Input.mousePosition.x + 7532, Input.mousePosition.y, Input.mousePosition.z);
+                new Vector3(Input.mousePosition.x + startPosition.x, Input.mousePosition.y + startPosition.y, Input.mousePosition.z + startPosition.z);
             // 将鼠标位置转换为在屏幕上的点
             Ray ray = Camera.main.ScreenPointToRay(calculatedPos);
             ray = new Ray(Camera.main.transform.position,
