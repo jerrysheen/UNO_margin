@@ -28,9 +28,10 @@ public class GameManager : MonoBehaviour
     public CinemachineVirtualCamera oldCam = null;
 
     public Dictionary<LevelState, CinemachineVirtualCamera> levelMountDic;
-    public ClickEffect currentClickEffect;
-    public string currentDialogue;
-
+    public Stack<ClickEffect> currentClickEffect;
+    public Stack<string> currentDialogue;
+    public Stack<int>  currentBehaviour;
+    
     public Dictionary<LevelState, Vector3> levelMountPoints;
     public KeyBoardMouseInput keyBoardMouseInputScript;
     
@@ -91,7 +92,7 @@ public class GameManager : MonoBehaviour
         //todo:
         // testcode
         //EventManager.Instance.TriggerEvent(GameEvent.OnEnterLevel3);
-
+        
         levelMountDic = new Dictionary<LevelState, CinemachineVirtualCamera>();
         levelMountPoints = new Dictionary<LevelState, Vector3>();
         Transform parent = this.transform.Find("VirtualLevelCam");
@@ -130,12 +131,17 @@ public class GameManager : MonoBehaviour
         {
             Debug.LogError("No such script");
         }
+
+        currentClickEffect = new Stack<ClickEffect>();
+        currentDialogue = new Stack<string>();
+        currentBehaviour = new Stack<int>();
     }
 
     public void TriggerDialogue(string name)
     {
         DialogueManager.Instance.TriggerDialogue(name);
-        currentDialogue = name;
+        currentDialogue.Push(name);
+        currentBehaviour.Push(0);
     }
 
 
@@ -145,19 +151,19 @@ public class GameManager : MonoBehaviour
         return true;
     }
 
-    public void ShowAlbum()
-    {
-        Debug.Log("ShowAlbum");
-        album.transform.position = new Vector3(level3Mount.transform.position.x, level3Mount.transform.position.y, album.transform.position.z);
-    }
-
-    
-    public void OpenCamera()
-    {
-        Debug.Log("ShowAlbum");
-        camera.transform.position = new Vector3(level3Mount.transform.position.x, level3Mount.transform.position.y, camera.transform.position.z);
-
-    }
+    // public void ShowAlbum()
+    // {
+    //     Debug.Log("ShowAlbum");
+    //     album.transform.position = new Vector3(level3Mount.transform.position.x, level3Mount.transform.position.y, album.transform.position.z);
+    // }
+    //
+    //
+    // public void OpenCamera()
+    // {
+    //     Debug.Log("ShowAlbum");
+    //     camera.transform.position = new Vector3(level3Mount.transform.position.x, level3Mount.transform.position.y, camera.transform.position.z);
+    //
+    // }
 
     // 这里添加 GameManager 的其他功能和方法
     
@@ -167,7 +173,8 @@ public class GameManager : MonoBehaviour
         ClickEffect clickEffect = go.GetComponent<ClickEffect>();
         if (clickEffect)
         {
-            currentClickEffect = clickEffect;
+            currentClickEffect.Push(clickEffect);
+            currentBehaviour.Push(1);
             clickEffect.ChangeState();
         }
     }
@@ -175,24 +182,28 @@ public class GameManager : MonoBehaviour
     public void EmptyClick()
     {
         EventManager.Instance.TriggerEvent(GameEvent.EmptyClicked);
-        if (currentDialogue != "")
+        if(currentBehaviour.Count > 0)
         {
-            DialogueManager.Instance.DisableDialogue(currentDialogue);
-            currentDialogue = "";
-            if (currentClickEffect != null)
+            int behaviour = currentBehaviour.Pop();
+            if (behaviour == 0)
             {
-                state = GameState.PlayFullScreenPic;
+                string currDialogue = currentDialogue.Pop();
+                DialogueManager.Instance.DisableDialogue(currDialogue);
+                if (currentClickEffect != null)
+                {
+                    state = GameState.PlayFullScreenPic;
+                }
+                else
+                {
+                    state = GameState.Normal;
+                }
             }
             else
             {
+                ClickEffect currEffect = currentClickEffect.Pop();
+                currEffect.DisableEffect();
                 state = GameState.Normal;
             }
-        }
-        else if (currentClickEffect != null)
-        {
-            currentClickEffect.DisableEffect();
-            currentClickEffect = null;
-            state = GameState.Normal;
         }
     }
     
@@ -229,16 +240,16 @@ public class GameManagerEditor : Editor
     {
         base.OnInspectorGUI();
         GameManager gameManager = (GameManager) target;
-        if (GUILayout.Button("Show Album"))
-        {
-            gameManager.ShowAlbum();
-        }
-        if (GUILayout.Button("Open Camera"))
-        {
-            gameManager.OpenCamera();
-        }
+        // if (GUILayout.Button("Show Album"))
+        // {
+        //     gameManager.ShowAlbum();
+        // }
+        // if (GUILayout.Button("Open Camera"))
+        // {
+        //     gameManager.OpenCamera();
+        // }
 
-        if (GUILayout.Button("Switch Camera"))
+        if (GUILayout.Button("Switch To Scene"))
         {
             gameManager.SwitchToScene();
         }

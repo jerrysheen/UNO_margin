@@ -10,14 +10,14 @@ public class ClickEffect : MonoBehaviour
     public GameObject afterCkickGo;
     public bool isStateChange = false;
     public Animator animator;
-
+    public string animatorState;
     public bool needTriggerDialogue = false;
 
     public string dialogueName = "";
 
     // Start is called before the first frame update
     public float delayTime = 1.0f;
-
+    public Collider[] colliders;
     void Start()
     {
         originGo = transform.Find("Origin")?.gameObject;
@@ -29,6 +29,13 @@ public class ClickEffect : MonoBehaviour
         if (effectGo) effectGo.SetActive(false);
         if (afterCkickGo) afterCkickGo.SetActive(false);
         isStateChange = false;
+        if (!animator)
+        {
+            animator = GetComponent<Animator>();
+            if(animator)animator.enabled = false;
+        }
+
+        colliders = this.GetComponents<Collider>();
     }
 
     public void ChangeState()
@@ -84,10 +91,17 @@ public class ClickEffect : MonoBehaviour
             
 
             isStateChange = true;
+            
+            foreach (var collider in colliders)
+            {
+                collider.enabled = false;
+            }
         }
 
         if (animator)
         {
+            animator.enabled = true;
+            //animator.SetTrigger(animatorState);
         }
     }
 
