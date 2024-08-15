@@ -33,7 +33,7 @@ public class SingleConversation : MonoBehaviour
             
             // 播放序列
             mySequence.Play();
-            Debug.Log("Dialogue Play");
+            Debug.Log("Dialogue Play" + this.name);
         }
         else if (clipIndex == 1)
         {

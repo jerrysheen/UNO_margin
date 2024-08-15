@@ -144,6 +144,12 @@ public class GameManager : MonoBehaviour
         currentBehaviour.Push(0);
     }
 
+    public void PushDialogueIntoStack(string name)
+    {
+        currentDialogue.Push(name);
+        currentBehaviour.Push(2);
+    }
+
 
     public bool SetGameState(GameState newState)
     {
@@ -187,6 +193,7 @@ public class GameManager : MonoBehaviour
             int behaviour = currentBehaviour.Pop();
             if (behaviour == 0)
             {
+                // 对话隐藏逻辑
                 string currDialogue = currentDialogue.Pop();
                 DialogueManager.Instance.DisableDialogue(currDialogue);
                 if (currentClickEffect != null)
@@ -198,11 +205,21 @@ public class GameManager : MonoBehaviour
                     state = GameState.Normal;
                 }
             }
-            else
+            else if(behaviour == 1)
             {
+                // 点击效果触发。
                 ClickEffect currEffect = currentClickEffect.Pop();
                 currEffect.DisableEffect();
                 state = GameState.Normal;
+            }
+            else if (behaviour == 2)
+            {
+                // 对话触发
+                string currDialogue = currentDialogue.Pop();
+                DialogueManager.Instance.TriggerDialogue(currDialogue);
+                state = GameState.PlayDialogue;
+                currentDialogue.Push(currDialogue);
+                currentBehaviour.Push(0);
             }
         }
     }

@@ -56,6 +56,9 @@ TagManager:
   - name: Foreground
     uniqueID: 1950422495
     locked: 0
+  - name: MImaBoxLIghtingLayer
+    uniqueID: 2820774563
+    locked: 0
   - name: Near Foreground
     uniqueID: 2727812175
     locked: 0

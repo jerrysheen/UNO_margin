@@ -13,8 +13,12 @@ public class ClickEffect : MonoBehaviour
     public string animatorState;
     public bool needTriggerDialogue = false;
 
+    // 这种写法废弃了， 只是前面的内容懒得改了。。。
     public string dialogueName = "";
 
+    public List<string> dialogueList;
+    public bool triggerAnimatorAtBegin = false;
+    public bool triggerAnimatorAtEnd = true;
     // Start is called before the first frame update
     public float delayTime = 1.0f;
     public Collider[] colliders;
@@ -36,6 +40,10 @@ public class ClickEffect : MonoBehaviour
         }
 
         colliders = this.GetComponents<Collider>();
+        if (dialogueName != "")
+        {
+            dialogueList.Add(dialogueName);
+        }
     }
 
     public void ChangeState()
@@ -44,14 +52,17 @@ public class ClickEffect : MonoBehaviour
         {
             originGo.SetActive(false);
             Sequence mySequence = DOTween.Sequence(); // 创建一个DOTween序列
+            if(triggerAnimatorAtBegin)mySequence.Append(animator.EnableAnimator(true));
             if (effectGo)
             {
+
                 // 获取当前GameObject的所有Renderer组件
                 Renderer[] renderers = effectGo.GetComponentsInChildren<Renderer>();
-
+            
                 // 遍历所有的Renderer
                 foreach (Renderer rend in renderers)
                 {
+
                     // 确保Renderer使用的材质有透明度属性
                     if (rend.material.HasProperty("_Color"))
                     {
@@ -84,9 +95,14 @@ public class ClickEffect : MonoBehaviour
                     GameManager.Instance.SetGameState(GameManager.GameState.PlayDialogue);
                     if (needTriggerDialogue)
                     {
+                        for(int i = dialogueList.Count - 2; i >= 0; i--)
+                        {
+                            GameManager.Instance.PushDialogueIntoStack(dialogueList[i]);
+                        }
                         // 让gamemanager去拉起dialogue， game manager去负责所有的imput
                         GameManager.Instance.TriggerDialogue(dialogueName);
                     }
+                    if(triggerAnimatorAtEnd)animator.enabled = true;
                 });
             
 
@@ -98,11 +114,6 @@ public class ClickEffect : MonoBehaviour
             }
         }
 
-        if (animator)
-        {
-            animator.enabled = true;
-            //animator.SetTrigger(animatorState);
-        }
     }
 
     public void DisableEffect()
