@@ -73,9 +73,9 @@ public class PasswordButton : MonoBehaviour, IPointerDownHandler, IPointerUpHand
         float switchTime = 0.25f;
 
         // 添加图片切换的动画
-        sequence.AppendCallback(() => image.sprite = imageA);
+        sequence.AppendCallback(() => image.sprite = imageWrong);
         sequence.AppendInterval(switchTime);
-        sequence.AppendCallback(() => image.sprite = imageB);
+        sequence.AppendCallback(() => image.sprite = imageA);
         sequence.AppendInterval(switchTime);
 
         // 设置为循环三次，每次循环包括两次图片切换

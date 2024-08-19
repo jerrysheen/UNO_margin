@@ -12,9 +12,11 @@ public class SingleConversation : MonoBehaviour
     public GameObject lastPosition;
     // Start is called before the first frame update
     private Material targetMaterial;
+    public Vector3 oldPosition;
     void Start()
     {
         targetMaterial = this.GetComponent<SpriteRenderer>().material;
+        oldPosition = this.transform.position;
     }
 
     public void PlayClip(int clipIndex)
@@ -23,8 +25,8 @@ public class SingleConversation : MonoBehaviour
         {
             // 创建一个序列
             Sequence mySequence = DOTween.Sequence();
-            
-            Vector3 position = this.transform.position;
+            targetMaterial.SetFloat("_DissolveAmount", 0);
+            Vector3 position = oldPosition;
             position.y = maxPosition.transform.position.y;
             // 添加向上移动的动画，假设向上移动 5 单位，耗时 1 秒
             mySequence.Append(this.transform.DOMove(position, 0.3f));

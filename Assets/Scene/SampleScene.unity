@@ -808,7 +808,7 @@ MonoBehaviour:
   buttonName: 
   imageA: {fileID: 21300000, guid: fad2fe146aaa77e4c81f64d54b3ced14, type: 3}
   imageB: {fileID: 21300000, guid: 4dad5003c513edf48bace6eef823206a, type: 3}
-  imageWrong: {fileID: 0}
+  imageWrong: {fileID: 21300000, guid: 992a98094140ec14d964f77184fb147a, type: 3}
   currIndex: 0
   passwordController: {fileID: 0}
 --- !u!1 &161011210
@@ -1444,7 +1444,7 @@ MonoBehaviour:
   buttonName: 
   imageA: {fileID: 21300000, guid: 064af03e974abe145b44f1da7873c378, type: 3}
   imageB: {fileID: 21300000, guid: e5f6bcbe7cd87554ca77db8eaacde2d0, type: 3}
-  imageWrong: {fileID: 0}
+  imageWrong: {fileID: 21300000, guid: ef29265de85c7bf478bfcbe0f5c6aed0, type: 3}
   currIndex: 0
   passwordController: {fileID: 0}
 --- !u!1 &283391987
@@ -4214,7 +4214,7 @@ MonoBehaviour:
   buttonName: 
   imageA: {fileID: 21300000, guid: c08443e9eff38b34a98e96ab9e1f9fb9, type: 3}
   imageB: {fileID: 21300000, guid: 3f022f6c73865f6408d9ea605a14afc1, type: 3}
-  imageWrong: {fileID: 0}
+  imageWrong: {fileID: 21300000, guid: 5ed0749857420934c94b82014c639d3d, type: 3}
   currIndex: 0
   passwordController: {fileID: 0}
 --- !u!1 &1107907658 stripped
@@ -4461,7 +4461,7 @@ MonoBehaviour:
   buttonName: 
   imageA: {fileID: 21300000, guid: 3712602d4bf94ac44906983c08fe27d8, type: 3}
   imageB: {fileID: 21300000, guid: 72c2e60fcd3bd6b4ab0d418d4311ef03, type: 3}
-  imageWrong: {fileID: 0}
+  imageWrong: {fileID: 21300000, guid: ce4b43e9cd598394cbece71e59827042, type: 3}
   currIndex: 0
   passwordController: {fileID: 0}
 --- !u!1 &1230419681
@@ -4668,7 +4668,7 @@ MonoBehaviour:
   buttonName: 
   imageA: {fileID: 21300000, guid: 2bea388010ae476408a7de8488a7593f, type: 3}
   imageB: {fileID: 21300000, guid: 8e55076b8449cb441a362a9d9c59d057, type: 3}
-  imageWrong: {fileID: 0}
+  imageWrong: {fileID: 21300000, guid: fe39b73fbbb464b48bf80530641ed9a4, type: 3}
   currIndex: 0
   passwordController: {fileID: 0}
 --- !u!1 &1274631393
@@ -4851,7 +4851,7 @@ MonoBehaviour:
   buttonName: 
   imageA: {fileID: 21300000, guid: 65fb3afc79d9ceb44b0715dd2c5e153b, type: 3}
   imageB: {fileID: 21300000, guid: f1a30f4c4a1561541ac308eba658ac49, type: 3}
-  imageWrong: {fileID: 0}
+  imageWrong: {fileID: 21300000, guid: 540a9e3f48b95e34888c09ef2aa2236c, type: 3}
   currIndex: 0
   passwordController: {fileID: 0}
 --- !u!1 &1355268891 stripped
@@ -4951,7 +4951,7 @@ MonoBehaviour:
   buttonName: 
   imageA: {fileID: 21300000, guid: a1314bea99ab6b640b2d1c982418bbf4, type: 3}
   imageB: {fileID: 21300000, guid: 80c2d532164ca3a4590b599248d514b7, type: 3}
-  imageWrong: {fileID: 0}
+  imageWrong: {fileID: 21300000, guid: 3e28ff3821fda794bac55440cdcc162f, type: 3}
   currIndex: 0
   passwordController: {fileID: 0}
 --- !u!1 &1486218780
@@ -6036,6 +6036,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fullPassword: 158
   currPass: []
+  currPassScript: []
 --- !u!1 &1780276543
 GameObject:
   m_ObjectHideFlags: 0
@@ -6220,7 +6221,7 @@ MonoBehaviour:
   buttonName: 
   imageA: {fileID: 21300000, guid: 660c7e25f94597a4f8660343e57e6d8b, type: 3}
   imageB: {fileID: 21300000, guid: 6e6ae3dd3d6a07b4199873cf42162209, type: 3}
-  imageWrong: {fileID: 0}
+  imageWrong: {fileID: 21300000, guid: 68600d8173d339a4b83d5171bfbe4ae0, type: 3}
   currIndex: 0
   passwordController: {fileID: 0}
 --- !u!1 &1835185894
@@ -6382,7 +6383,7 @@ MonoBehaviour:
   buttonName: 
   imageA: {fileID: 21300000, guid: af07cd40b3dc2df4eb763afc780012a5, type: 3}
   imageB: {fileID: 21300000, guid: 102cc47b65d0bae4984a69550d13b00e, type: 3}
-  imageWrong: {fileID: 0}
+  imageWrong: {fileID: 21300000, guid: 6782ac1f85ad6f5459fddfb05f9ff652, type: 3}
   currIndex: 0
   passwordController: {fileID: 0}
 --- !u!1 &2012605476

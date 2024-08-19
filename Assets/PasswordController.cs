@@ -62,11 +62,12 @@ public class PasswordController : MonoBehaviour
         if (password == fullPassword)
         {
             Debug.Log("true!!!!");
-            TriggerPasswordWrong();
+            TriggerPasswordRight();
         }
         else
         {
             Debug.Log(password);
+            TriggerPasswordWrong();
             ResetCondition();
         }
     }
@@ -82,5 +83,14 @@ public class PasswordController : MonoBehaviour
     public void ResetCondition()
     {
         Debug.LogError("Password wrong!!!");
+        currPass.Clear();
+        currPassScript.Clear();
+        GameManager.Instance.TriggerDialogue("Level4_conversation5");
+    }
+
+    public void TriggerPasswordRight()
+    {
+        GameManager.Instance.TriggerDialogue("Level4_conversation4");
+        // show photo here maybe...
     }
 }
