@@ -8,6 +8,7 @@ public class PasswordController : MonoBehaviour
     // Start is called before the first frame update
     public string fullPassword = "158";
     public List<string> currPass;
+    public List<PasswordButton> currPassScript;
     void Start()
     {
         fullPassword = "158";
@@ -20,9 +21,15 @@ public class PasswordController : MonoBehaviour
         
     }
 
-    public bool AddNewButton(string newString)
+    private void OnEnable()
+    {
+        GameManager.Instance.TriggerDialogue("Level4_conversation6");
+    }
+
+    public bool AddNewButton(string newString, PasswordButton script)
     {
         currPass.Add(newString);
+        currPassScript.Add(script);
         if (currPass.Count < 3)
         {
             return true;
@@ -55,11 +62,20 @@ public class PasswordController : MonoBehaviour
         if (password == fullPassword)
         {
             Debug.Log("true!!!!");
+            TriggerPasswordWrong();
         }
         else
         {
             Debug.Log(password);
             ResetCondition();
+        }
+    }
+    
+    public void TriggerPasswordWrong()
+    {
+        foreach (var script in currPassScript)
+        {
+            script.TriggerWrongEffect();
         }
     }
 

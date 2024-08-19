@@ -1,7 +1,7 @@
-using Unity.VisualScripting;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems; // 引入事件系统命名空间
-using UnityEngine.UI;          // 引入UI命名空间
+using UnityEngine.UI;
 public class PasswordButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     public string buttonName;
@@ -50,7 +50,7 @@ public class PasswordButton : MonoBehaviour, IPointerDownHandler, IPointerUpHand
         // 释放后恢复到图片A
         if (currIndex == 1)
         {
-            if (!passwordController.AddNewButton(buttonName))
+            if (!passwordController.AddNewButton(buttonName,this))
             {
                 image.sprite = imageA;
             }
@@ -62,5 +62,23 @@ public class PasswordButton : MonoBehaviour, IPointerDownHandler, IPointerUpHand
         }
 
 
+    }
+
+    public void TriggerWrongEffect()
+    {
+        // 创建一个新的 DOTween 序列
+        Sequence sequence = DOTween.Sequence();
+
+        // 总时间分配为 1.5s，每次切换需要的时间是 1.5s / 6 = 0.25s
+        float switchTime = 0.25f;
+
+        // 添加图片切换的动画
+        sequence.AppendCallback(() => image.sprite = imageA);
+        sequence.AppendInterval(switchTime);
+        sequence.AppendCallback(() => image.sprite = imageB);
+        sequence.AppendInterval(switchTime);
+
+        // 设置为循环三次，每次循环包括两次图片切换
+        sequence.SetLoops(3, LoopType.Restart);
     }
 }
