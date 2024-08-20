@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class PasswordController : MonoBehaviour
@@ -9,6 +10,9 @@ public class PasswordController : MonoBehaviour
     public string fullPassword = "158";
     public List<string> currPass;
     public List<PasswordButton> currPassScript;
+
+    public GameObject imageGameObject;
+
     void Start()
     {
         fullPassword = "158";
@@ -18,7 +22,7 @@ public class PasswordController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnEnable()
@@ -54,6 +58,7 @@ public class PasswordController : MonoBehaviour
         {
             System.Console.WriteLine(number);
         }
+
         return true;
     }
 
@@ -71,7 +76,7 @@ public class PasswordController : MonoBehaviour
             ResetCondition();
         }
     }
-    
+
     public void TriggerPasswordWrong()
     {
         foreach (var script in currPassScript)
@@ -92,5 +97,23 @@ public class PasswordController : MonoBehaviour
     {
         GameManager.Instance.TriggerDialogue("Level4_conversation4");
         // show photo here maybe...
+        // 创建一个序列
+        Sequence mySequence = DOTween.Sequence();
+
+        // 添加第一个要执行的函数
+        mySequence.AppendCallback(() => { });
+
+        // 等待1.5秒
+        mySequence.AppendInterval(1.5f);
+
+        // 添加第二个要执行的函数
+        mySequence.AppendCallback(() => { });
+
+        // 再次等待1.5秒
+        mySequence.AppendInterval(1.5f);
+
+        // 执行打开界面的函数
+        mySequence.AppendCallback(() => { });
     }
+
 }
