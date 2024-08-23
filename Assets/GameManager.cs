@@ -175,6 +175,7 @@ public class GameManager : MonoBehaviour
     
     public void ItemClicked(GameObject go)
     {
+        if(state == GameState.PlayFullScreenPic) return;
         //  这里之后会添加触发条件，来控制。
         ClickEffect clickEffect = go.GetComponent<ClickEffect>();
         if (clickEffect)
@@ -187,7 +188,6 @@ public class GameManager : MonoBehaviour
     
     public void EmptyClick()
     {
-        if(state == GameState.PlayFullScreenPic) return;
         EventManager.Instance.TriggerEvent(GameEvent.EmptyClicked);
         if(currentBehaviour.Count > 0)
         {
@@ -197,28 +197,28 @@ public class GameManager : MonoBehaviour
                 // 对话隐藏逻辑
                 string currDialogue = currentDialogue.Pop();
                 DialogueManager.Instance.DisableDialogue(currDialogue);
-                if (currentClickEffect != null)
-                {
-                    state = GameState.PlayFullScreenPic;
-                }
-                else
-                {
-                    state = GameState.Normal;
-                }
+                // if (currentClickEffect != null)
+                // {
+                //     state = GameState.PlayFullScreenPic;
+                // }
+                // else
+                // {
+                //     state = GameState.Normal;
+                // }
             }
             else if(behaviour == 1)
             {
                 // 点击效果触发。
                 ClickEffect currEffect = currentClickEffect.Pop();
                 currEffect.DisableEffect();
-                state = GameState.Normal;
+                //state = GameState.Normal;
             }
             else if (behaviour == 2)
             {
                 // 对话触发
                 string currDialogue = currentDialogue.Pop();
                 DialogueManager.Instance.TriggerDialogue(currDialogue);
-                state = GameState.PlayDialogue;
+                //state = GameState.PlayDialogue;
                 currentDialogue.Push(currDialogue);
                 currentBehaviour.Push(0);
             }

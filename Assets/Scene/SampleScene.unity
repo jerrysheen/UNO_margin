@@ -4277,7 +4277,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: -1567155121
-  m_SortingOrder: 50
+  m_SortingOrder: 25
   m_TargetDisplay: 0
 --- !u!224 &1772003415
 RectTransform:
@@ -4305,7 +4305,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 13392, y: 1853}
+  m_AnchoredPosition: {x: 11094, y: 557}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1772003416
@@ -5075,6 +5075,11 @@ PrefabInstance:
     - target: {fileID: 324475042128980091, guid: ed103b893ef73844ca020aac5ea467cc,
         type: 3}
       propertyPath: gameState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 324475042128980091, guid: ed103b893ef73844ca020aac5ea467cc,
+        type: 3}
+      propertyPath: needChangeState
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 324475042128980091, guid: ed103b893ef73844ca020aac5ea467cc,

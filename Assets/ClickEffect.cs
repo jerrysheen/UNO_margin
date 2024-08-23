@@ -106,7 +106,7 @@ public class ClickEffect : MonoBehaviour
                 {
                     //anotherGameObject.SetActive(true); // 例如激活另一个GameObject
                     Debug.Log("拉起对话");
-                    GameManager.Instance.SetGameState(GameManager.GameState.PlayDialogue);
+                    //GameManager.Instance.SetGameState(GameManager.GameState.PlayDialogue);
                     if (needTriggerDialogue)
                     {
                         for(int i = dialogueList.Count - 2; i >= 0; i--)
@@ -160,7 +160,7 @@ public class ClickEffect : MonoBehaviour
             {
                 if (afterCkickGo) afterCkickGo.SetActive(true);
                 if (effectGo) effectGo.SetActive(false);
-                GameManager.Instance.SetGameState(GameManager.GameState.PlayFullScreenPic);
+                //GameManager.Instance.SetGameState(GameManager.GameState.PlayFullScreenPic);
             });
 
         }

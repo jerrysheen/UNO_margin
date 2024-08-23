@@ -29,17 +29,30 @@ public class PasswordController : MonoBehaviour
         imageMaterial.DOColor(targetColor, 1.5f);
         
         EventManager.Instance.StartListening(GameEvent.OnOpenPasswordBox, OnOpenPasswordBox);
+        targetColor = new Color(1.0f, 1.0f, 1.0f, 0.0f);
+        passWordBoxMaterial.DOColor(targetColor, 0.01f);
         this.gameObject.SetActive(false);
     }
 
-    private void OnDisable()
-    {
-        EventManager.Instance.StopListening(GameEvent.OnOpenPasswordBox, OnOpenPasswordBox);
-    }
+//    private void OnDisable()
+//    {
+//        EventManager.Instance.StopListening(GameEvent.OnOpenPasswordBox, OnOpenPasswordBox);
+//    }
 
     public void OnOpenPasswordBox()
     {
+        Sequence mySequence = DOTween.Sequence();
         
+        mySequence.AppendInterval(0.01f);
+        mySequence.AppendCallback(() =>
+        {
+            this.gameObject.SetActive(true);
+        });
+        mySequence.AppendInterval(0.01f);
+        mySequence.AppendCallback(() =>
+        {
+            passWordBoxMaterial.DOColor(boxMatColor, 2.5f);
+        });
     }
 
     // Update is called once per frame
@@ -50,7 +63,8 @@ public class PasswordController : MonoBehaviour
 
     private void OnEnable()
     {
-        GameManager.Instance.TriggerDialogue("Level4_conversation6");
+        //GameManager.Instance.TriggerDialogue("Level4_conversation6");
+        // 判断， 如果是第二次开启，就需要enable这个。
     }
 
     public bool AddNewButton(string newString, PasswordButton script)
