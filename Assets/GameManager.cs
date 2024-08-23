@@ -187,6 +187,7 @@ public class GameManager : MonoBehaviour
     
     public void EmptyClick()
     {
+        if(state == GameState.PlayFullScreenPic) return;
         EventManager.Instance.TriggerEvent(GameEvent.EmptyClicked);
         if(currentBehaviour.Count > 0)
         {

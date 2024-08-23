@@ -12,7 +12,8 @@ public class ClickEffect : MonoBehaviour
     public Animator animator;
     public string animatorState;
     public bool needTriggerDialogue = false;
-
+    public bool needChangeState = false;
+    public bool needTriggerEvent = false;
     // 这种写法废弃了， 只是前面的内容懒得改了。。。
     public string dialogueName = "";
 
@@ -22,6 +23,9 @@ public class ClickEffect : MonoBehaviour
     // Start is called before the first frame update
     public float delayTime = 1.0f;
     public Collider[] colliders;
+    
+    public GameManager.GameState gameState;
+    public GameEvent gameEvent;
     void Start()
     {
         originGo = transform.Find("Origin")?.gameObject;
@@ -48,6 +52,16 @@ public class ClickEffect : MonoBehaviour
 
     public void ChangeState()
     {
+        if (needChangeState)
+        {
+            GameManager.Instance.SetGameState(gameState);
+        }
+
+        if (needTriggerEvent)
+        {
+            EventManager.Instance.TriggerEvent(gameEvent);
+        }
+
         if (!isStateChange && originGo.activeSelf)
         {
             originGo.SetActive(false);
@@ -81,7 +95,7 @@ public class ClickEffect : MonoBehaviour
                 mySequence.OnComplete(() =>
                 {
                     if (afterCkickGo) afterCkickGo.SetActive(true);
-                    GameManager.Instance.SetGameState(GameManager.GameState.PlayFullScreenPic);
+                    //GameManager.Instance.SetGameState(GameManager.GameState.PlayFullScreenPic);
                 });
 
                 // 添加两秒的延迟

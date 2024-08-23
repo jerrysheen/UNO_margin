@@ -12,11 +12,34 @@ public class PasswordController : MonoBehaviour
     public List<PasswordButton> currPassScript;
 
     public GameObject imageGameObject;
-
+    public Material passWordBoxMaterial;
+    private Material imageMaterial;
+    public Color boxMatColor;
+    public Color imageColor;
+    public GameObject zhaoPian;
     void Start()
     {
         fullPassword = "158";
         currPass = new List<string>();
+        boxMatColor = passWordBoxMaterial.color;
+        imageMaterial = zhaoPian.GetComponent<SpriteRenderer>().material;
+        imageColor = imageMaterial.color;
+        
+        Color targetColor = new Color(0.0f, 0.0f, 0.0f, 1.0f);
+        imageMaterial.DOColor(targetColor, 1.5f);
+        
+        EventManager.Instance.StartListening(GameEvent.OnOpenPasswordBox, OnOpenPasswordBox);
+        this.gameObject.SetActive(false);
+    }
+
+    private void OnDisable()
+    {
+        EventManager.Instance.StopListening(GameEvent.OnOpenPasswordBox, OnOpenPasswordBox);
+    }
+
+    public void OnOpenPasswordBox()
+    {
+        
     }
 
     // Update is called once per frame
@@ -100,20 +123,57 @@ public class PasswordController : MonoBehaviour
         // 创建一个序列
         Sequence mySequence = DOTween.Sequence();
 
-        // 添加第一个要执行的函数
-        mySequence.AppendCallback(() => { });
-
-        // 等待1.5秒
         mySequence.AppendInterval(1.5f);
 
-        // 添加第二个要执行的函数
-        mySequence.AppendCallback(() => { });
+        // 添加第一个要执行的函数
+        mySequence.AppendCallback(() => {GameManager.Instance.EmptyClick();});
+
+        // // 等待1.5秒
+        // mySequence.AppendInterval(1.5f);
+        //
+        // // 添加第二个要执行的函数
+        // mySequence.AppendCallback(() => 
+        // {        
+        //     GameManager.Instance.TriggerDialogue("Level4_conversation6");
+        // });
 
         // 再次等待1.5秒
         mySequence.AppendInterval(1.5f);
 
         // 执行打开界面的函数
-        mySequence.AppendCallback(() => { });
+        mySequence.AppendCallback(() => {GameManager.Instance.EmptyClick();});
+        Color targetColor = new Color(boxMatColor.r, boxMatColor.g, boxMatColor.b, 0);
+        mySequence.Append(passWordBoxMaterial.DOColor(targetColor, 1.5f));
+        mySequence.AppendCallback(() => {imageGameObject.GetComponent<ClickEffect>().ChangeState();});
+        mySequence.AppendInterval(1.5f);
+        mySequence.AppendCallback(() => 
+        {        
+            GameManager.Instance.TriggerDialogue("Level4_conversation3");
+        });
+        mySequence.AppendInterval(1.5f);
+        mySequence.AppendCallback(() => {GameManager.Instance.EmptyClick();});
+        //mySequence.AppendInterval(1.5f);
+        
+        targetColor = imageColor;
+        mySequence.Append(imageMaterial.DOColor(new Color(1.0f, 1.0f, 1.0f, 1.0f), 1.5f));
+        mySequence.AppendInterval(0.3f);
+
+        mySequence.AppendCallback(() => 
+        {        
+            GameManager.Instance.TriggerDialogue("Level4_conversation1");
+        });
+        mySequence.AppendInterval(1.5f);
+        mySequence.AppendCallback(() => {GameManager.Instance.EmptyClick();});
+        mySequence.AppendInterval(1.5f);
+        mySequence.AppendCallback(() => {imageGameObject.GetComponent<ClickEffect>().DisableEffect();});
+        
     }
 
+    private void OnApplicationQuit()
+    {
+        Debug.Log("Quit");
+        passWordBoxMaterial.color = boxMatColor;
+        imageMaterial.color = imageColor;
+        // 
+    }
 }
