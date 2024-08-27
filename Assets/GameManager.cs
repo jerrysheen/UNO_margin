@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
     public Dictionary<LevelState, Vector3> levelMountPoints;
     public KeyBoardMouseInput keyBoardMouseInputScript;
     
+    public GameObject cutSceneEffectGo;
     public enum GameState
     {
         Normal,
@@ -227,6 +228,8 @@ public class GameManager : MonoBehaviour
     
     public void SwitchToScene()
     {
+        cutSceneEffectGo.Getcomponet<CutSceneEffect>().StartCutScene();
+        
         levelMountDic.TryGetValue(nextScene, out CinemachineVirtualCamera nextCam);
         levelMountPoints.TryGetValue(nextScene, out Vector3 nextPos);
         EventManager.Instance.TriggerEvent(GetLevelEvent(nextScene.ToString(), "_Entering"), 1.0f);

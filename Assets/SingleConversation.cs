@@ -19,7 +19,7 @@ public class SingleConversation : MonoBehaviour
     {
         targetMaterial = this.GetComponent<SpriteRenderer>().material;
         oldPosition = this.transform.position;
-        targetMaterial.color = new Color(targetMaterial.color.r, targetMaterial.color.g, targetMaterial.color.b, 0);
+        this.GetComponent<SpriteRenderer>().material.color = new Color(targetMaterial.color.r, targetMaterial.color.g, targetMaterial.color.b, 0);
     }
 
     private void OnApplicationQuit()
@@ -33,7 +33,7 @@ public class SingleConversation : MonoBehaviour
         {
             AudioManager.PlayMusic(NewLibraryMusic.UI_Show);
             // 创建一个序列
-            Sequence mySequence = DOTween.Sequence();
+            //Sequence mySequence = DOTween.Sequence();
             targetMaterial.SetFloat("_DissolveAmount", 0);
             // Vector3 position = oldPosition;
             // position.y = maxPosition.transform.position.y;
@@ -48,11 +48,12 @@ public class SingleConversation : MonoBehaviour
                 finalColor.a = 0; // 初始透明度设为0
                 targetMaterial.color = finalColor;
                 // 将透明度从0渐变到原始值
-                mySequence.Join(targetMaterial.DOColor(new Color(finalColor.r, finalColor.g, finalColor.b, 1),
-                    0.5f));
+                targetMaterial.DOColor(new Color(finalColor.r, finalColor.g, finalColor.b, 1),
+                    1.5f);
+                //mySequence.Join();
             }
             // 播放序列
-            mySequence.Play();
+            //mySequence.Play();
             Debug.Log("Dialogue Play" + this.name);
         }
         else if (clipIndex == 1)
