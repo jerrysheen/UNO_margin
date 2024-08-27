@@ -228,7 +228,7 @@ public class GameManager : MonoBehaviour
     
     public void SwitchToScene()
     {
-        cutSceneEffectGo.Getcomponet<CutSceneEffect>().StartCutScene();
+        cutSceneEffectGo.GetComponent<CutSceneEffect>().StartCutScene();
         
         levelMountDic.TryGetValue(nextScene, out CinemachineVirtualCamera nextCam);
         levelMountPoints.TryGetValue(nextScene, out Vector3 nextPos);

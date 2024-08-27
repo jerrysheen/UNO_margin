@@ -2134,8 +2134,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4121d24c373cc24eb2abaf540fdea5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  part1Speed: 1.5
-  part2Speed: 1.5
+  part1Speed: 0.5
+  intervalTime: 1
+  part2Speed: 1
 --- !u!1 &723135335
 GameObject:
   m_ObjectHideFlags: 0
@@ -2429,7 +2430,7 @@ MonoBehaviour:
   nextScene: 1
   oldCam: {fileID: 0}
   keyBoardMouseInputScript: {fileID: 0}
-  cutSceneEffect: {fileID: 1216658550}
+  cutSceneEffectGo: {fileID: 697902766}
 --- !u!114 &868119600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3779,6 +3780,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   part1Speed: 1.5
+  intervalTime: 0.5
   part2Speed: 1.5
 --- !u!1 &1230419681
 GameObject:

@@ -9,7 +9,8 @@ using UnityEngine.Rendering.Universal;
 public class CutSceneEffect : MonoBehaviour
 {
 
-    public float part1Speed = 1.5f;
+    public float part1Speed = 0.5f;
+    public float intervalTime = 0.5f;
     public float part2Speed = 1.5f;
     // Start is called before the first frame update
     void Start()
@@ -30,14 +31,14 @@ public class CutSceneEffect : MonoBehaviour
         Color firstTargetColor = new Color(0, 0, 0, 1);  // 第一个目标颜色为黑色
         Color secondTargetColor = new Color(1, 1, 1, 1);  // 第二个目标颜色为白色
         Sequence mySequence = DOTween.Sequence();
-        mySequence.Append(DOTween.To(() => currentColor, x => currentColor = x, firstTargetColor, 2f)
+        mySequence.Append(DOTween.To(() => currentColor, x => currentColor = x, firstTargetColor, part1Speed)
                 .OnUpdate(() =>
                 {
                     volume.profile.TryGet<ColorAdjustments>(out var colorAdjustments);
                     colorAdjustments.colorFilter.value = currentColor;
                 }))
-            .AppendInterval(1.5f)
-            .Append(DOTween.To(() => currentColor, x => currentColor = x, secondTargetColor, 3f)
+            .AppendInterval(intervalTime)
+            .Append(DOTween.To(() => currentColor, x => currentColor = x, secondTargetColor, part2Speed)
                 .OnUpdate(() =>
                 {
                     volume.profile.TryGet<ColorAdjustments>(out var colorAdjustments);
