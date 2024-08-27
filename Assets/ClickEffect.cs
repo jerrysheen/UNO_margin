@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using JSAM;
+using JSAM.JSAMEditor;
 using UnityEngine;
 
 public class ClickEffect : MonoBehaviour
@@ -23,6 +26,9 @@ public class ClickEffect : MonoBehaviour
     // Start is called before the first frame update
     public float delayTime = 1.0f;
     public Collider[] colliders;
+
+    public bool playMusicEffect = false;
+    public MusicFileObject musicFileObject;
     
     public GameManager.GameState gameState;
     public GameEvent gameEvent;
@@ -60,6 +66,14 @@ public class ClickEffect : MonoBehaviour
         if (needTriggerEvent)
         {
             EventManager.Instance.TriggerEvent(gameEvent);
+        }
+
+        if (playMusicEffect)
+        {
+            string enumName = "";
+            //AudioLibraryEditor.Window.GetMusicEnumName(musicFileObject, out enumName);
+            NewLibraryMusic newLibraryMusic = (NewLibraryMusic)Enum.Parse(typeof(NewLibraryMusic), musicFileObject.SafeName);
+            AudioManager.PlayMusic(newLibraryMusic);
         }
 
         if (!isStateChange && originGo.activeSelf)

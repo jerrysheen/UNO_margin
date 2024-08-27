@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.brogrammist.jsam": "https://github.com/jackyyang09/Simple-Unity-Audio-Manager.git#master",
     "com.unity.2d.animation": "9.1.0",
     "com.unity.2d.common": "8.0.2",
     "com.unity.2d.psdimporter": "8.0.5",

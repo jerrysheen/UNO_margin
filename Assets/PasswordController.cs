@@ -179,7 +179,11 @@ public class PasswordController : MonoBehaviour
         mySequence.AppendInterval(1.5f);
         mySequence.AppendCallback(() => {GameManager.Instance.EmptyClick();});
         mySequence.AppendInterval(1.5f);
-        mySequence.AppendCallback(() => {imageGameObject.GetComponent<ClickEffect>().DisableEffect();});
+        mySequence.AppendCallback(() =>
+        {
+            imageGameObject.GetComponent<ClickEffect>().DisableEffect();
+            GameManager.Instance.SetGameState(GameManager.GameState.Normal);
+        });
         
     }
 

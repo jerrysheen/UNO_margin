@@ -68,7 +68,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaClip: 0.24
-    - _DissolveAmount: 0
+    - _DissolveAmount: 0.14
     - _DissolveScale: 47.86
     - _DissolveWidth: 0.46
     - _EnableExternalAlpha: 0
@@ -78,7 +78,7 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DissolveColor: {r: 266.36862, g: 1.250557, b: 0, a: 0}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _MainColor: {r: 1, g: 1, b: 1, a: 0}
+    - _MainColor: {r: 1, g: 1, b: 1, a: 1}
     - _NoiseUV: {r: 1, g: 0.66, b: 0, a: 0}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
