@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,10 +18,10 @@ public class AlbumController : MonoBehaviour
 
     public List<RenderTexture> photoContent;
     // Start is called before the first frame update
-    private int count = 0;
+    public int count = 0;
     void Start()
     {
-        sprite.GetComponent<RawImage>().texture = outputTexture;
+        //sprite.GetComponent<RawImage>().texture = outputTexture;
         //mat.SetTexture("_BaseMap", outputTexture );
         photoPlace = new List<GameObject>();
         photoContent = new List<RenderTexture>();
@@ -28,16 +29,26 @@ public class AlbumController : MonoBehaviour
         var parent = this.transform.Find("Canvas").gameObject;
         if (parent)
         {
-            for (int i = 0; i < photoPlace.Count; i++)
+            for (int i = 0; i < parent.transform.childCount; i++)
             {
                 var go = parent.transform.GetChild(i).gameObject;
                 photoPlace.Add(go);
             }
         }
+        else
+        {
+            Debug.Log("Not Find Canvas");
+        }
 
         for (int i = 0; i < photoPlace.Count; i++)
         {
             photoContent.Add(RenderTexture.GetTemporary(1920, 1080, 24));
+        }
+
+        foreach (var go in photoPlace)
+        {
+            Color currColor = go.GetComponent<RawImage>().color;
+            go.GetComponent<RawImage>().color = new Color(currColor.r, currColor.g, currColor.b, 0.0f);
         }
     }
 
@@ -67,8 +78,9 @@ public class AlbumController : MonoBehaviour
         }
         albumCamera.targetTexture = photoContent[count];
         albumCamera.Render();
-        sprite.GetComponent<RawImage>().texture = photoContent[count];
+        photoPlace[count].GetComponent<RawImage>().texture = photoContent[count];
         albumCamera.targetTexture = outputTexture;
+        photoPlace[count].GetComponent<RawImage>().DOColor(new Color(1,1,1,1), 1);
         count++;
     }
 }
