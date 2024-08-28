@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using JSAM;
+using TMPro;
 using UnityEngine;
 
 public class BGMPlayer : MonoBehaviour
 {
+    public bool bgmLevel03_firstPlay = true;
     // Start is called before the first frame update
     private void OnEnable()
     {
@@ -19,6 +21,10 @@ public class BGMPlayer : MonoBehaviour
 
     private void OnLevelStart()
     {
-        AudioManager.PlayMusic(NewLibraryMusic.Level3_BGM);
+        if (bgmLevel03_firstPlay)
+        {
+            AudioManager.PlayMusic(NewLibraryMusic.Level3_BGM);
+            bgmLevel03_firstPlay = false;
+        }
     }    
 }
