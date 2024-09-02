@@ -10,4 +10,5 @@ public class CustomCursor : MonoBehaviour
         // 设置自定义光标
         Cursor.SetCursor(cursorTexture, hotSpot, CursorMode.Auto);
     }
+    
 }

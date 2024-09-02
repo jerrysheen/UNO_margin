@@ -52,7 +52,7 @@ public class AlbumController : MonoBehaviour
             go.GetComponent<RawImage>().color = new Color(currColor.r, currColor.g, currColor.b, 0.0f);
         }
         EventManager.Instance.StartListening(GameEvent.MoveCamera, OnMoveCamera);    
-        albumCanvas.SetActive(false);   
+        album.SetActive(false);   
     }
 
     private void OnMoveCamera(object  parameter)

@@ -9,19 +9,25 @@ public class AlbumCameraMovementController : MonoBehaviour
 {
 
     public GameObject cameraObject;
+    public GameObject cameraComponent;
     private Vector3 oldPostion;
+
+    private Vector3 mountPoint;
     // Start is called before the first frame update
     void Start()
     {
         this.transform.localPosition = new Vector3(10128, -31, 0);
         EventManager.Instance.StartListening(GameEvent.MoveCamera, OnMoveCamera);    
         cameraObject.SetActive(false);
+        oldPostion = cameraComponent.transform.localPosition;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Vector3 calculatedPos =
+            new Vector3(Input.mousePosition.x + mountPoint.x, Input.mousePosition.y + mountPoint.y, Input.mousePosition.z + mountPoint.z);
+        cameraComponent.transform.position = calculatedPos;
     }
     
     void OnApplicationQuit()
@@ -43,6 +49,9 @@ public class AlbumCameraMovementController : MonoBehaviour
         {
             Debug.LogError("Error: Received incorrect parameter type");
         }
+        
+        mountPoint = mountPosition;
         this.transform.position = mountPosition;
+        cameraComponent.transform.position = oldPostion;
     }    
 }

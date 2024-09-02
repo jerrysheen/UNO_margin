@@ -169,7 +169,7 @@ Transform:
   m_GameObject: {fileID: 2513035928296738826}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5614, y: -22, z: 0}
+  m_LocalPosition: {x: 5584, y: -22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -290,7 +290,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1023, y: 559}
+  m_AnchoredPosition: {x: 997, y: 559}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &5297992351902396564
@@ -657,7 +657,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3267716540737709369}
+  m_Father: {fileID: 8304173608190674360}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &7802548132239562815
 Camera:
@@ -895,7 +895,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 4275237442444437965, guid: 235aaa4f6ff7f654c849c95433cf66fe,
+    - targetCorrespondingSourceObject: {fileID: 7292360007267273036, guid: 235aaa4f6ff7f654c849c95433cf66fe,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 3591756256740578851}
@@ -930,6 +930,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraObject: {fileID: 6758589549945942406}
+--- !u!4 &8304173608190674360 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7292360007267273036, guid: 235aaa4f6ff7f654c849c95433cf66fe,
+    type: 3}
+  m_PrefabInstance: {fileID: 1589193614004538612}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6604910960006949576
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -986,7 +992,7 @@ PrefabInstance:
     - target: {fileID: 2378023002892997932, guid: c0c2d90c4ef9e2e4a8451a6b218f0d6d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1148
+      value: 1122
       objectReference: {fileID: 0}
     - target: {fileID: 2378023002892997932, guid: c0c2d90c4ef9e2e4a8451a6b218f0d6d,
         type: 3}

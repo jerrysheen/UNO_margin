@@ -40,7 +40,8 @@ public class GameManager : MonoBehaviour
     {
         Normal,
         PlayFullScreenPic,
-        PlayDialogue
+        PlayDialogue,
+        FullScreenCamera
     }
 
     public enum LevelState
@@ -155,6 +156,15 @@ public class GameManager : MonoBehaviour
     public bool SetGameState(GameState newState)
     {
         state = newState;
+        if (newState == GameState.FullScreenCamera)
+        {
+            Cursor.visible = false;
+        }
+        else
+        {
+            Cursor.visible = true;
+        }
+
         return true;
     }
 
@@ -176,7 +186,7 @@ public class GameManager : MonoBehaviour
     
     public void ItemClicked(GameObject go)
     {
-        if(state == GameState.PlayFullScreenPic) return;
+        if(state == GameState.PlayFullScreenPic || state == GameState.FullScreenCamera) return;
         //  这里之后会添加触发条件，来控制。
         ClickEffect clickEffect = go.GetComponent<ClickEffect>();
         if (clickEffect)
