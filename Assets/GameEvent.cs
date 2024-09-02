@@ -22,5 +22,6 @@ public enum GameEvent
     Level5_Entering,
     Level5_Leveling,
     EmptyClicked,
-    OnOpenPasswordBox
+    OnOpenPasswordBox,
+    MoveCamera
 }

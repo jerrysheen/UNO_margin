@@ -233,6 +233,7 @@ public class GameManager : MonoBehaviour
         levelMountDic.TryGetValue(nextScene, out CinemachineVirtualCamera nextCam);
         levelMountPoints.TryGetValue(nextScene, out Vector3 nextPos);
         EventManager.Instance.TriggerEvent(GetLevelEvent(nextScene.ToString(), "_Entering"), 1.0f);
+        EventManager.Instance.TriggerEvent(GameEvent.MoveCamera, nextPos);
         if (nextCam)
         {
             nextCam.Priority = 12;
