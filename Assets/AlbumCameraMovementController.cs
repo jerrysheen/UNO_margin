@@ -8,12 +8,14 @@ using Vector3 = UnityEngine.Vector3;
 public class AlbumCameraMovementController : MonoBehaviour
 {
 
+    public GameObject cameraObject;
     private Vector3 oldPostion;
     // Start is called before the first frame update
     void Start()
     {
         this.transform.localPosition = new Vector3(10128, -31, 0);
         EventManager.Instance.StartListening(GameEvent.MoveCamera, OnMoveCamera);    
+        cameraObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -21,8 +23,8 @@ public class AlbumCameraMovementController : MonoBehaviour
     {
         
     }
-
-    void OnDisable()
+    
+    void OnApplicationQuit()
     {
         EventManager.Instance.StopListening(GameEvent.MoveCamera, OnMoveCamera);
     }

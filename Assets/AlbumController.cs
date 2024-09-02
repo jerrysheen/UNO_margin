@@ -10,7 +10,8 @@ public class AlbumController : MonoBehaviour
 {
     
     public Camera albumCamera;
-
+    public GameObject albumCanvas;
+    public GameObject cameraObject;
     public GameObject sprite;
     public RenderTexture outputTexture;
 
@@ -50,6 +51,8 @@ public class AlbumController : MonoBehaviour
             Color currColor = go.GetComponent<RawImage>().color;
             go.GetComponent<RawImage>().color = new Color(currColor.r, currColor.g, currColor.b, 0.0f);
         }
+        
+        albumCanvas.SetActive(false);
     }
 
 
