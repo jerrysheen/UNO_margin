@@ -12,7 +12,7 @@ public class AlbumController : MonoBehaviour
     public Camera albumCamera;
     public GameObject albumCanvas;
     public GameObject cameraObject;
-    public GameObject sprite;
+    public GameObject album;
     public RenderTexture outputTexture;
 
     public List<GameObject> photoPlace;
@@ -27,7 +27,7 @@ public class AlbumController : MonoBehaviour
         photoPlace = new List<GameObject>();
         photoContent = new List<RenderTexture>();
         count = 0;
-        var parent = this.transform.Find("Canvas").gameObject;
+        var parent = albumCanvas;
         if (parent)
         {
             for (int i = 0; i < parent.transform.childCount; i++)
@@ -51,11 +51,28 @@ public class AlbumController : MonoBehaviour
             Color currColor = go.GetComponent<RawImage>().color;
             go.GetComponent<RawImage>().color = new Color(currColor.r, currColor.g, currColor.b, 0.0f);
         }
-        
-        albumCanvas.SetActive(false);
+        EventManager.Instance.StartListening(GameEvent.MoveCamera, OnMoveCamera);    
+        albumCanvas.SetActive(false);   
     }
 
+    private void OnMoveCamera(object  parameter)
+    {
+        Vector3 mountPosition = Vector3.zero;
+        if (parameter is Vector3 position)
+        {
+            mountPosition = position;
 
+            // 处理 Vector3 数据，例如更新角色位置
+            Debug.Log("Position updated to: " + position);
+        }
+        else
+        {
+            Debug.LogError("Error: Received incorrect parameter type");
+        }
+        album.transform.position = mountPosition;
+    }    
+    
+    
     private void OnApplicationQuit()
     {
         foreach (var rt in photoContent)

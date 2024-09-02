@@ -28,6 +28,7 @@ public class AlbumCameraMovementController : MonoBehaviour
     {
         EventManager.Instance.StopListening(GameEvent.MoveCamera, OnMoveCamera);
     }
+    
     private void OnMoveCamera(object  parameter)
     {
         Vector3 mountPosition = Vector3.zero;
