@@ -20,8 +20,11 @@ public class AlbumController : MonoBehaviour
     public List<RenderTexture> photoContent;
     // Start is called before the first frame update
     public int count = 0;
+
+    private bool isEventInject = false;
     void Start()
     {
+        isEventInject = false;
         //sprite.GetComponent<RawImage>().texture = outputTexture;
         //mat.SetTexture("_BaseMap", outputTexture );
         photoPlace = new List<GameObject>();
@@ -51,7 +54,13 @@ public class AlbumController : MonoBehaviour
             Color currColor = go.GetComponent<RawImage>().color;
             go.GetComponent<RawImage>().color = new Color(currColor.r, currColor.g, currColor.b, 0.0f);
         }
-        EventManager.Instance.StartListening(GameEvent.MoveCamera, OnMoveCamera);    
+
+        if (!isEventInject)
+        {
+            EventManager.Instance.StartListening(GameEvent.MoveCamera, OnMoveCamera);    
+            EventManager.Instance.StartListening(GameEvent.EmptyClicked, OnEmptyClicked);
+            isEventInject = true;
+        }
         album.SetActive(false);   
     }
 
@@ -70,6 +79,15 @@ public class AlbumController : MonoBehaviour
             Debug.LogError("Error: Received incorrect parameter type");
         }
         album.transform.position = mountPosition;
+    }       
+    
+    private void OnEmptyClicked()
+    {
+        if (GameManager.Instance.state == GameManager.GameState.FullScreenCamera)
+        {
+            Debug.Log("Camera capture");
+            CaptureOnePhoto();
+        }
     }    
     
     
@@ -82,6 +100,9 @@ public class AlbumController : MonoBehaviour
                 RenderTexture.ReleaseTemporary(rt);
             }
         }
+        
+        EventManager.Instance.StopListening(GameEvent.MoveCamera, OnMoveCamera);
+        EventManager.Instance.StopListening(GameEvent.EmptyClicked, OnEmptyClicked);
     }
 
     // Update is called once per frame

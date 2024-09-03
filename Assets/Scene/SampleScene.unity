@@ -1470,7 +1470,7 @@ Camera:
   far clip plane: 822.3
   field of view: 70.1
   orthographic: 1
-  orthographic size: 576
+  orthographic size: 576.75
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1495,7 +1495,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3465.835, y: 540.00195, z: -588}
+  m_LocalPosition: {x: 982.83496, y: 551, z: -588}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3338,8 +3338,8 @@ MonoBehaviour:
   enable: 1
   needSwitchScene: 0
   nextScene: 0
-  needChangeGameState: 0
-  gameState: 0
+  needChangeGameState: 1
+  gameState: 3
 --- !u!114 &947024356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3491,8 +3491,8 @@ MonoBehaviour:
   enable: 1
   needSwitchScene: 0
   nextScene: 0
-  needChangeGameState: 0
-  gameState: 0
+  needChangeGameState: 1
+  gameState: 1
 --- !u!114 &952131354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4259,8 +4259,8 @@ MonoBehaviour:
   enable: 1
   needSwitchScene: 0
   nextScene: 0
-  needChangeGameState: 0
-  gameState: 0
+  needChangeGameState: 1
+  gameState: 1
 --- !u!114 &1178163166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5256,8 +5256,8 @@ MonoBehaviour:
   enable: 1
   needSwitchScene: 0
   nextScene: 0
-  needChangeGameState: 0
-  gameState: 0
+  needChangeGameState: 1
+  gameState: 3
 --- !u!114 &1566327450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7397,7 +7397,7 @@ MonoBehaviour:
   needSwitchScene: 0
   nextScene: 0
   needChangeGameState: 1
-  gameState: 3
+  gameState: 1
 --- !u!1 &2045087706
 GameObject:
   m_ObjectHideFlags: 0
