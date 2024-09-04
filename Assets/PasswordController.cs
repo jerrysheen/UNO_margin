@@ -51,7 +51,8 @@ public class PasswordController : MonoBehaviour
         mySequence.AppendInterval(0.01f);
         mySequence.AppendCallback(() =>
         {
-            passWordBoxMaterial.DOColor(boxMatColor, 2.5f);
+            Color targetColor = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+            passWordBoxMaterial.DOColor(targetColor, 1.5f);
         });
     }
 

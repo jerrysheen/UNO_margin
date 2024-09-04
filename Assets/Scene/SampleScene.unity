@@ -159,8 +159,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 879, y: 475.2}
-  m_SizeDelta: {x: 245.4417, y: 132.9663}
+  m_AnchoredPosition: {x: 898.7754, y: 447}
+  m_SizeDelta: {x: 178.8547, y: 158.1098}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &29890869
 MonoBehaviour:
@@ -238,7 +238,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 58d3c0daa1133ea43a9400ad468f74a3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4ca74c3c9fb2faf429eccdfa6684d845, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -268,8 +268,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df219b2dcead4b4aadad52a9e9dd05b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageA: {fileID: 21300000, guid: 58d3c0daa1133ea43a9400ad468f74a3, type: 3}
-  imageB: {fileID: 21300000, guid: 9ec6715e407ba0746844c537e42b1cdd, type: 3}
+  imageA: {fileID: 21300000, guid: 4ca74c3c9fb2faf429eccdfa6684d845, type: 3}
+  imageB: {fileID: 21300000, guid: 4ca74c3c9fb2faf429eccdfa6684d845, type: 3}
   triggerObject: {fileID: 1182051354}
   enable: 1
   needSwitchScene: 0
@@ -2457,7 +2457,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 8489, y: 534}
+  m_AnchoredPosition: {x: 8487, y: 537}
   m_SizeDelta: {x: 2048, y: 1150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &605120588
@@ -2568,8 +2568,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 871, y: 301.3}
-  m_SizeDelta: {x: 245.4417, y: 132.9663}
+  m_AnchoredPosition: {x: 905.9958, y: 258.34644}
+  m_SizeDelta: {x: 181.591, y: 161.6659}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &612883836
 MonoBehaviour:
@@ -2635,7 +2635,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cd74d65002aed134d8a57dd2f8d07ee9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b7d518115c0165542b7ed4755de4e388, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2665,8 +2665,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df219b2dcead4b4aadad52a9e9dd05b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageA: {fileID: 21300000, guid: cd74d65002aed134d8a57dd2f8d07ee9, type: 3}
-  imageB: {fileID: 21300000, guid: 459093a3098279a4d9568d05a07c375c, type: 3}
+  imageA: {fileID: 21300000, guid: b7d518115c0165542b7ed4755de4e388, type: 3}
+  imageB: {fileID: 21300000, guid: b7d518115c0165542b7ed4755de4e388, type: 3}
   triggerObject: {fileID: 0}
   enable: 0
   needSwitchScene: 0
@@ -3399,8 +3399,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 879, y: 475.2}
-  m_SizeDelta: {x: 245.4417, y: 132.9663}
+  m_AnchoredPosition: {x: 902.18, y: 439.9301}
+  m_SizeDelta: {x: 181.09, y: 162.9267}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &947024355
 MonoBehaviour:
@@ -3414,8 +3414,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df219b2dcead4b4aadad52a9e9dd05b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageA: {fileID: 21300000, guid: 58d3c0daa1133ea43a9400ad468f74a3, type: 3}
-  imageB: {fileID: 21300000, guid: 9ec6715e407ba0746844c537e42b1cdd, type: 3}
+  imageA: {fileID: 21300000, guid: 4ca74c3c9fb2faf429eccdfa6684d845, type: 3}
+  imageB: {fileID: 21300000, guid: 4ca74c3c9fb2faf429eccdfa6684d845, type: 3}
   triggerObject: {fileID: 1182051354}
   enable: 1
   needSwitchScene: 0
@@ -3498,7 +3498,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 58d3c0daa1133ea43a9400ad468f74a3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4ca74c3c9fb2faf429eccdfa6684d845, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3552,8 +3552,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 885, y: 134}
-  m_SizeDelta: {x: 245.4417, y: 132.9663}
+  m_AnchoredPosition: {x: 912.9473, y: 53}
+  m_SizeDelta: {x: 194.6235, y: 172.63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &952131353
 MonoBehaviour:
@@ -3567,8 +3567,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df219b2dcead4b4aadad52a9e9dd05b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageA: {fileID: 21300000, guid: 8af2af24827d2a949b68659cc626abec, type: 3}
-  imageB: {fileID: 21300000, guid: b4b5f49ec1a88024ea47c25d7758a88e, type: 3}
+  imageA: {fileID: 21300000, guid: c031ccffd6911ea418495376de9710d4, type: 3}
+  imageB: {fileID: 21300000, guid: c031ccffd6911ea418495376de9710d4, type: 3}
   triggerObject: {fileID: 4965889539336661469}
   enable: 1
   needSwitchScene: 0
@@ -3651,7 +3651,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8af2af24827d2a949b68659cc626abec, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c031ccffd6911ea418495376de9710d4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3756,8 +3756,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 871, y: 301.3}
-  m_SizeDelta: {x: 245.4417, y: 132.9663}
+  m_AnchoredPosition: {x: 909, y: 248.64642}
+  m_SizeDelta: {x: 186.73, y: 161.6201}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &989196491
 MonoBehaviour:
@@ -3771,8 +3771,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df219b2dcead4b4aadad52a9e9dd05b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageA: {fileID: 21300000, guid: cd74d65002aed134d8a57dd2f8d07ee9, type: 3}
-  imageB: {fileID: 21300000, guid: 459093a3098279a4d9568d05a07c375c, type: 3}
+  imageA: {fileID: 21300000, guid: b7d518115c0165542b7ed4755de4e388, type: 3}
+  imageB: {fileID: 21300000, guid: b7d518115c0165542b7ed4755de4e388, type: 3}
   triggerObject: {fileID: 0}
   enable: 0
   needSwitchScene: 0
@@ -3843,7 +3843,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cd74d65002aed134d8a57dd2f8d07ee9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b7d518115c0165542b7ed4755de4e388, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4320,8 +4320,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 885, y: 134}
-  m_SizeDelta: {x: 245.4417, y: 132.9663}
+  m_AnchoredPosition: {x: 913.73, y: 68}
+  m_SizeDelta: {x: 187.97, y: 178.5338}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1178163165
 MonoBehaviour:
@@ -4335,8 +4335,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df219b2dcead4b4aadad52a9e9dd05b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageA: {fileID: 21300000, guid: 8af2af24827d2a949b68659cc626abec, type: 3}
-  imageB: {fileID: 21300000, guid: b4b5f49ec1a88024ea47c25d7758a88e, type: 3}
+  imageA: {fileID: 21300000, guid: c031ccffd6911ea418495376de9710d4, type: 3}
+  imageB: {fileID: 21300000, guid: c031ccffd6911ea418495376de9710d4, type: 3}
   triggerObject: {fileID: 4965889539336661469}
   enable: 1
   needSwitchScene: 0
@@ -4419,7 +4419,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8af2af24827d2a949b68659cc626abec, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c031ccffd6911ea418495376de9710d4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5317,8 +5317,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 879, y: 475.2}
-  m_SizeDelta: {x: 245.4417, y: 132.9663}
+  m_AnchoredPosition: {x: 903.00684, y: 445}
+  m_SizeDelta: {x: 181.4262, y: 173.5282}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1566327449
 MonoBehaviour:
@@ -5332,8 +5332,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df219b2dcead4b4aadad52a9e9dd05b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageA: {fileID: 21300000, guid: 58d3c0daa1133ea43a9400ad468f74a3, type: 3}
-  imageB: {fileID: 21300000, guid: 9ec6715e407ba0746844c537e42b1cdd, type: 3}
+  imageA: {fileID: 21300000, guid: 4ca74c3c9fb2faf429eccdfa6684d845, type: 3}
+  imageB: {fileID: 21300000, guid: 4ca74c3c9fb2faf429eccdfa6684d845, type: 3}
   triggerObject: {fileID: 1182051354}
   enable: 1
   needSwitchScene: 0
@@ -5416,7 +5416,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 58d3c0daa1133ea43a9400ad468f74a3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4ca74c3c9fb2faf429eccdfa6684d845, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6403,8 +6403,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 871, y: 301.3}
-  m_SizeDelta: {x: 245.4417, y: 132.9663}
+  m_AnchoredPosition: {x: 906, y: 250}
+  m_SizeDelta: {x: 187.974, y: 165.802}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1791620201
 MonoBehaviour:
@@ -6418,8 +6418,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df219b2dcead4b4aadad52a9e9dd05b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageA: {fileID: 21300000, guid: cd74d65002aed134d8a57dd2f8d07ee9, type: 3}
-  imageB: {fileID: 21300000, guid: 459093a3098279a4d9568d05a07c375c, type: 3}
+  imageA: {fileID: 21300000, guid: b7d518115c0165542b7ed4755de4e388, type: 3}
+  imageB: {fileID: 21300000, guid: b7d518115c0165542b7ed4755de4e388, type: 3}
   triggerObject: {fileID: 0}
   enable: 0
   needSwitchScene: 0
@@ -6490,7 +6490,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cd74d65002aed134d8a57dd2f8d07ee9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b7d518115c0165542b7ed4755de4e388, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6975,7 +6975,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 13688, y: 534}
+  m_AnchoredPosition: {x: 13675, y: 534}
   m_SizeDelta: {x: 2048, y: 1150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1835185894
@@ -7363,8 +7363,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 885, y: 134}
-  m_SizeDelta: {x: 245.4417, y: 132.9663}
+  m_AnchoredPosition: {x: 911.53, y: 51.430588}
+  m_SizeDelta: {x: 192.67, y: 169.8947}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2012605478
 MonoBehaviour:
@@ -7442,7 +7442,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8af2af24827d2a949b68659cc626abec, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c031ccffd6911ea418495376de9710d4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7472,8 +7472,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df219b2dcead4b4aadad52a9e9dd05b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageA: {fileID: 21300000, guid: 8af2af24827d2a949b68659cc626abec, type: 3}
-  imageB: {fileID: 21300000, guid: b4b5f49ec1a88024ea47c25d7758a88e, type: 3}
+  imageA: {fileID: 21300000, guid: c031ccffd6911ea418495376de9710d4, type: 3}
+  imageB: {fileID: 21300000, guid: c031ccffd6911ea418495376de9710d4, type: 3}
   triggerObject: {fileID: 4965889539336661469}
   enable: 1
   needSwitchScene: 0
@@ -8328,6 +8328,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7248964911524436536, guid: ed103b893ef73844ca020aac5ea467cc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7465242246995554181, guid: ed103b893ef73844ca020aac5ea467cc,
         type: 3}

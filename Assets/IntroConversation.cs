@@ -18,6 +18,7 @@ public class IntroConversation : MonoBehaviour
     public GameObject converRoot;
     private void OnEnable()
     {
+        shouldStartIntroConversation = false;
         EventManager.Instance.StartListening(gameEvent, OnLevelStart);
         EventManager.Instance.StartListening(GameEvent.EmptyClicked, OnEmptyClicked);
     }
