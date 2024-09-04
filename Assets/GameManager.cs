@@ -186,7 +186,12 @@ public class GameManager : MonoBehaviour
     
     public void ItemClicked(GameObject go)
     {
-        if(state == GameState.PlayFullScreenPic || state == GameState.FullScreenCamera) return;
+        if(state == GameState.FullScreenCamera)
+        {
+            EmptyClick();
+            return;
+        }
+        if(state == GameState.PlayFullScreenPic) return;
         //  这里之后会添加触发条件，来控制。
         ClickEffect clickEffect = go.GetComponent<ClickEffect>();
         if (clickEffect)
