@@ -3861,6 +3861,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 989196489}
   m_CullTransparentMesh: 1
+--- !u!1 &1006820058 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7976128509981007806, guid: ed103b893ef73844ca020aac5ea467cc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1377721947572616018}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1033532571
 GameObject:
   m_ObjectHideFlags: 3
@@ -4448,6 +4454,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3267716540737709369, guid: a35d6d74018dee0409a76fe395111235,
     type: 3}
   m_PrefabInstance: {fileID: 4965889539336661468}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1182547237 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3004587693482567992, guid: ed103b893ef73844ca020aac5ea467cc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1377721947572616018}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1209386445
 GameObject:
@@ -6367,6 +6379,8 @@ MonoBehaviour:
   boxMatColor: {r: 0, g: 0, b: 0, a: 0}
   imageColor: {r: 0, g: 0, b: 0, a: 0}
   zhaoPian: {fileID: 110510345}
+  enableObj: {fileID: 1006820058}
+  disableObj: {fileID: 1182547237}
 --- !u!1 &1791620199
 GameObject:
   m_ObjectHideFlags: 0
@@ -8324,6 +8338,21 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6632564219635262845, guid: ed103b893ef73844ca020aac5ea467cc,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6632564219635262845, guid: ed103b893ef73844ca020aac5ea467cc,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6632564219635262845, guid: ed103b893ef73844ca020aac5ea467cc,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1567155121
+      objectReference: {fileID: 0}
     - target: {fileID: 6980128730115170281, guid: ed103b893ef73844ca020aac5ea467cc,
         type: 3}
       propertyPath: m_Layer
@@ -8490,6 +8519,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2304380441703390988, guid: 3e263b0f1fd04e24b8b7a5777057d821,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2453121817129787701, guid: 3e263b0f1fd04e24b8b7a5777057d821,
         type: 3}
       propertyPath: m_SortingOrder
@@ -8548,7 +8582,7 @@ PrefabInstance:
     - target: {fileID: 4523574290479947763, guid: 3e263b0f1fd04e24b8b7a5777057d821,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4692859835099972437, guid: 3e263b0f1fd04e24b8b7a5777057d821,
         type: 3}

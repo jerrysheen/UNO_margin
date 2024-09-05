@@ -17,6 +17,9 @@ public class PasswordController : MonoBehaviour
     public Color boxMatColor;
     public Color imageColor;
     public GameObject zhaoPian;
+    
+    public GameObject enableObj;
+    public GameObject disableObj;
     void Start()
     {
         fullPassword = "158";
@@ -176,6 +179,8 @@ public class PasswordController : MonoBehaviour
         mySequence.AppendCallback(() => 
         {        
             GameManager.Instance.TriggerDialogue("Level4_conversation1");
+            if(enableObj)enableObj.SetActive(true);
+            if(disableObj)disableObj.SetActive(false);
         });
         mySequence.AppendInterval(1.5f);
         mySequence.AppendCallback(() => {GameManager.Instance.EmptyClick();});
