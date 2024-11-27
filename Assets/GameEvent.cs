@@ -21,6 +21,8 @@ public enum GameEvent
     Level4_Leveling,
     Level5_Entering,
     Level5_Leveling,
+    Level6_Entering,
+    Level6_Leveling,
     EmptyClicked,
     OnOpenPasswordBox,
     MoveCamera

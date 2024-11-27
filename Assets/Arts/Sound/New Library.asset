@@ -25,6 +25,18 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 988dccf820bc6734885d8546ee8e37e1, type: 2}
   - {fileID: 11400000, guid: 49df858ea68d6cd4eae927e0bc64727a, type: 2}
   - {fileID: 11400000, guid: f2faf0281a2e8c54dbf8431b4c1a1923, type: 2}
+  - {fileID: 11400000, guid: d0cf0eea8745a16429b5d55c3726fc29, type: 2}
+  - {fileID: 11400000, guid: c356b81d2c82c5f4fb35d164df55fa58, type: 2}
+  - {fileID: 11400000, guid: 2da6cb8f4c4f3ef46bc8bc167980fd79, type: 2}
+  - {fileID: 11400000, guid: 72219d770abc28344a0bcd09cede69a5, type: 2}
+  - {fileID: 11400000, guid: 4655186a087953744a74d97f6219b52f, type: 2}
+  - {fileID: 11400000, guid: 6beb0b89c2f38894ebd9bbaa73b00c3a, type: 2}
+  - {fileID: 11400000, guid: 0680fb4b16471694891476914ef8912c, type: 2}
+  - {fileID: 11400000, guid: a7552aefd832ffd4bb4724acb06f4560, type: 2}
+  - {fileID: 11400000, guid: cada0cb70f0acd6449ab12bbf78cabd9, type: 2}
+  - {fileID: 11400000, guid: b0c5ac3cc1d19824f85505d6781fc58d, type: 2}
+  - {fileID: 11400000, guid: f91656397c5f949469074f0114a6afa0, type: 2}
+  - {fileID: 11400000, guid: a0cd2691111a0124fb031442ce413ac1, type: 2}
   useCustomNames: 0
   generatedName: NewLibrary
   musicEnum: NewLibraryMusic
@@ -49,4 +61,16 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 988dccf820bc6734885d8546ee8e37e1, type: 2}
     - {fileID: 11400000, guid: 49df858ea68d6cd4eae927e0bc64727a, type: 2}
     - {fileID: 11400000, guid: f2faf0281a2e8c54dbf8431b4c1a1923, type: 2}
+    - {fileID: 11400000, guid: d0cf0eea8745a16429b5d55c3726fc29, type: 2}
+    - {fileID: 11400000, guid: c356b81d2c82c5f4fb35d164df55fa58, type: 2}
+    - {fileID: 11400000, guid: 2da6cb8f4c4f3ef46bc8bc167980fd79, type: 2}
+    - {fileID: 11400000, guid: 72219d770abc28344a0bcd09cede69a5, type: 2}
+    - {fileID: 11400000, guid: 4655186a087953744a74d97f6219b52f, type: 2}
+    - {fileID: 11400000, guid: 6beb0b89c2f38894ebd9bbaa73b00c3a, type: 2}
+    - {fileID: 11400000, guid: 0680fb4b16471694891476914ef8912c, type: 2}
+    - {fileID: 11400000, guid: a7552aefd832ffd4bb4724acb06f4560, type: 2}
+    - {fileID: 11400000, guid: cada0cb70f0acd6449ab12bbf78cabd9, type: 2}
+    - {fileID: 11400000, guid: b0c5ac3cc1d19824f85505d6781fc58d, type: 2}
+    - {fileID: 11400000, guid: f91656397c5f949469074f0114a6afa0, type: 2}
+    - {fileID: 11400000, guid: a0cd2691111a0124fb031442ce413ac1, type: 2}
     foldout: 1

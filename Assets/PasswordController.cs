@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using JSAM;
 using UnityEngine;
 
 public class PasswordController : MonoBehaviour
@@ -120,6 +121,8 @@ public class PasswordController : MonoBehaviour
 
     public void TriggerPasswordWrong()
     {
+        AudioManager.PlayMusic(NewLibraryMusic.Scene04_PasswordWrong);
+
         foreach (var script in currPassScript)
         {
             script.TriggerWrongEffect();
@@ -136,6 +139,7 @@ public class PasswordController : MonoBehaviour
 
     public void TriggerPasswordRight()
     {
+        AudioManager.PlayMusic(NewLibraryMusic.Scene04_PasswordCorrect);
         GameManager.Instance.TriggerDialogue("Level4_conversation4");
         // show photo here maybe...
         // 创建一个序列

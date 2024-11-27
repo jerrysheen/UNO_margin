@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public GameObject level3Mount;
     public GameObject level4Mount;
     public GameObject level5Mount;
+    public GameObject level6Mount;
     private static GameManager instance;
     
 
@@ -52,6 +53,7 @@ public class GameManager : MonoBehaviour
         Level3,
         Level4,
         Level5,
+        Level6
     }
 
     public static GameManager Instance
