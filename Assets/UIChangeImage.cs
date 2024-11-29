@@ -19,6 +19,10 @@ public class UIChangeImage : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
     {
         image = GetComponent<Image>();  // 获取Image组件
         image.sprite = imageA;          // 初始设置为图片A
+        if (triggerObject)
+        {
+            triggerObject.SetActive(false);
+        }
     }
 
     public void OnPointerDown(PointerEventData eventData)
