@@ -53,7 +53,8 @@ public class GameManager : MonoBehaviour
         Level3,
         Level4,
         Level5,
-        Level6
+        Level6,
+        Level7
     }
 
     public static GameManager Instance

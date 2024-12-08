@@ -9,7 +9,8 @@ public class UIChangeImage : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
     private Image image;     // Image组件
     public GameObject triggerObject;
     public bool enable;
-
+    public string dialogue;
+    public bool triggerDialogue = false;
     public bool needSwitchScene = false;
     public GameManager.LevelState nextScene;
 
@@ -18,7 +19,7 @@ public class UIChangeImage : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
     void Start()
     {
         image = GetComponent<Image>();  // 获取Image组件
-        image.sprite = imageA;          // 初始设置为图片A
+        if(imageA)image.sprite = imageA;          // 初始设置为图片A
         if (triggerObject)
         {
             triggerObject.SetActive(false);
@@ -28,7 +29,8 @@ public class UIChangeImage : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
     public void OnPointerDown(PointerEventData eventData)
     {
         // 按下时切换到图片B
-        image.sprite = imageB;
+        Debug.Log("PointDown");
+        if(imageA && imageB)image.sprite = imageB;
         GameManager.Instance.SetGameState(GameManager.GameState.PlayFullScreenPic);
 
     }
@@ -36,7 +38,8 @@ public class UIChangeImage : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
     public void OnPointerUp(PointerEventData eventData)
     {
         // 释放后恢复到图片A
-        image.sprite = imageA;
+        Debug.Log("On point up");
+        if(imageA && imageB)image.sprite = imageA;
         GameManager.Instance.SetGameState(GameManager.GameState.Normal);
         if (triggerObject)
         {
@@ -52,6 +55,11 @@ public class UIChangeImage : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
         if (needChangeGameState)
         {
             GameManager.Instance.SetGameState(gameState);
+        }
+
+        if (triggerDialogue)
+        {
+            GameManager.Instance.TriggerDialogue(dialogue);
         }
     }
 }

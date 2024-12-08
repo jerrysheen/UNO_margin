@@ -29,8 +29,9 @@ public class DialogueManager : MonoBehaviour
         GameObject level3 = GameObject.Find("Level3");
         GameObject level4 = GameObject.Find("Level4");
         GameObject level5 = GameObject.Find("Level5");
+        GameObject level6 = GameObject.Find("Level6");
         
-        levelDialogueList = new List<GameObject>(){level1, level2, level3, level4, level5};
+        levelDialogueList = new List<GameObject>(){level1, level2, level3, level4, level5, level6};
         debugList = new List<GameObject>();
         dialogueDic = new Dictionary<string, ConversationController>();
         foreach (var level_GO in levelDialogueList)
